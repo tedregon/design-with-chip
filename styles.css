@@ -175,7 +175,7 @@ main {
 }
 
 .beta-button {
-    background-color: #4CB221;
+    background-color: #4F32D9;
     color: #FFFFFF;
     border: none;
     border-radius: 8px;
@@ -184,10 +184,13 @@ main {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-left: auto;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .beta-button:hover {
-    background-color: #3a8f1a;
+    background-color: #3d26a8;
 }
 
 .app-intro {
@@ -197,7 +200,6 @@ main {
 .app-header {
     display: flex;
     align-items: center;
-    gap: 24px;
 }
 
 .app-icon {
@@ -205,6 +207,7 @@ main {
     height: 80px;
     border-radius: 16px;
     overflow: hidden;
+    margin-right: 16px;
 }
 
 .app-icon img {
