@@ -13,6 +13,10 @@ body {
     line-height: 1.6;
 }
 
+a, a:visited {
+    color: #FFFFFF;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -93,10 +97,13 @@ main {
 .card {
     background-color: #141516;
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px;
     text-align: left;
     flex: 1;
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .card:hover {
@@ -105,7 +112,6 @@ main {
 
 .card h3 {
     color: #FFFFFF;
-    margin-bottom: 12px;
 }
 
 .card p {
@@ -113,14 +119,32 @@ main {
 }
 
 .card-image {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 16px;
-    border-radius: 12px;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 0;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.card-initials {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.acting-coach-card {
+    background: linear-gradient(135deg, #3C1F7B 0%, #E06716 100%);
 }
 
 .card-image img {
@@ -134,7 +158,6 @@ main {
     line-height: 24px;
     font-weight: 600;
     color: #FFFFFF;
-    margin-bottom: 8px;
 }
 
 .card-description {
@@ -142,7 +165,7 @@ main {
     line-height: 20px;
     font-weight: 400;
     color: #FFFFFF;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .card-chip {
@@ -193,6 +216,17 @@ main {
     background-color: #3d26a8;
 }
 
+.appstore-link {
+    padding: 0;
+    background: none;
+}
+
+.store-badge {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
 .app-intro {
     margin: 40px 0 40px 0;
 }
@@ -214,6 +248,16 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.app-icon.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3C1F7B 0%, #E06716 100%);
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .app-title {
@@ -242,8 +286,16 @@ main {
     border-radius: 12px;
 }
 
-.development {
+.beta {
     background-color: #2184B2;
+}
+
+.development {
+    background-color: #616161;
+}
+
+.released {
+    background-color: #4CB221;
 }
 
 .app-description {
@@ -365,7 +417,6 @@ main {
 .important-dates h3 {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 12px;
     color: #000;
 }
 
@@ -476,4 +527,16 @@ main {
     line-height: 24px;
     color: #FFFFFF;
     margin-bottom: 16px;
+}
+
+.feature-list {
+    margin: 12px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #FFFFFF;
+}
+
+.feature-list li {
+    line-height: 22px;
 }
