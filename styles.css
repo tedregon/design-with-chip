@@ -127,6 +127,7 @@ main {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .card-content {
@@ -160,6 +161,15 @@ main {
     color: #FFFFFF;
 }
 
+.card-title-link {
+    text-decoration: none;
+    display: block;
+}
+
+.card-title-link .card-title {
+    margin: 0;
+}
+
 .card-description {
     font-size: 14px;
     line-height: 20px;
@@ -177,6 +187,7 @@ main {
     font-weight: 400;
     padding: 4px 12px;
     border-radius: 12px;
+    text-decoration: none;
 }
 
 .card-link {
@@ -296,6 +307,10 @@ main {
 
 .released {
     background-color: #4CB221;
+}
+
+.try-beta {
+    background-color: #4F32D9;
 }
 
 .app-description {
