@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://*.firebaseapp.com https://*.firebasestorage.app; font-src 'self' data:; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'self';">
+    <meta name="description" content="WordJam - Word Puzzle Game">
+    <meta name="theme-color" content="#F5C139">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="WordJam">
+    <title>WordJam - The Word Sliding Crossword</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/wordjam-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK v8 (compat mode for script tags) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+            integrity="sha384-v3Z/Xdw1sCeo6M/geW7sn1Lt9obIm7MhAk8laVV+rvYFmzuWDELOiygx7dVte2dX"
+            crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+            integrity="sha384-3LctmFHtNDZwkVOSZ0fvJZJD9XR5Og5ol/MVEfNt36gUUnSYBRJN0iFjIMbFecOg"
+            crossorigin="anonymous"></script>
+    <script src="firebase-config.js"></script>
+    <script src="firebase-service.js"></script>
+    <script src="sw-register.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <div class="game-header-inner">
+                <button class="btn-reset" id="reset-btn">
+                    <img src="img/arrow-u-up-left-fill.svg" alt="restart" class="reset-icon">
+                    <span>Try again</span>
+                    <span class="tries-counter">(<span id="reset-count">0</span>)</span>
+                </button>
+                <div class="words-found-wrapper">
+                    <button class="words-found-counter" id="words-found-counter">
+                        <span id="words-found-count">0</span> / <span id="words-total-count">0</span> words found
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256" fill="currentColor" class="accordion-icon">
+                            <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+                        </svg>
+                    </button>
+                    <div class="words-found-accordion" id="words-found-accordion">
+                        <div class="accordion-content">
+                            <div class="words-section">
+                                <div class="words-section-title">Today's words found</div>
+                                <div class="found-words-list" id="found-words-list"></div>
+                            </div>
+                            <div class="words-section">
+                                <div class="words-section-title">Other words found</div>
+                                <div class="found-words-list" id="other-found-words-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="letter-grid-container" id="letter-grid-container">
+                <!-- Letter rows will be generated here -->
+            </div>
+
+            <div class="game-controls">
+                <div class="result-banner" id="result-banner"></div>
+
+                <div class="action-buttons">
+                    <button class="btn-action btn-confirm" id="confirm-btn">
+                        <span class="btn-label">Confirm</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-over-modal" id="game-over-modal">
+            <div class="modal-content">
+                <h2>Game Over</h2>
+                <p id="game-over-message"></p>
+                <div class="modal-buttons">
+                    <button class="btn-modal" id="restart-btn">Restart</button>
+                    <button class="btn-modal" id="back-to-menu-btn">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="update-modal" id="update-modal">
+            <div class="modal-content">
+                <h2>Update Available</h2>
+                <p>A new version of WordJam is available. Refresh to get the latest features and improvements.</p>
+                <div class="modal-buttons">
+                    <button class="btn-modal" id="update-refresh-btn">Refresh</button>
+                    <button class="btn-modal" id="update-later-btn">Later</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="dictionary.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+

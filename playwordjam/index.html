@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://*.firebaseapp.com https://*.firebasestorage.app; font-src 'self' data:; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'self';">
+    <meta name="description" content="WordJam - Word Puzzle Game">
+    <meta name="theme-color" content="#F5C139">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="WordJam">
+    <title>WordJam - The Word Sliding Crossword</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/wordjam-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="sw-register.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="landing-content">
+            <div class="logo-container">
+                <img src="img/home-page-logo.png" alt="WordJam Logo" class="logo">
+            </div>
+            <section class="how-to-play">
+                <h2 class="how-to-play-title">How to Play</h2>
+                <div class="instructions">
+                    <ul class="instructions-list">
+                        <li>Drag rows to choose letters</li>
+                        <li>Select letters from each row to form a word</li>
+                        <li>Click "Confirm" to submit your word</li>
+                        <li>Find all the words to complete the puzzle</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="play-button-container">
+                <a href="game.html" class="btn-play" id="play-btn">Play</a>
+                <p class="offline-message" id="offline-message" style="display: none;">The game requires an internet connection</p>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            Created by <a href="https://chipdoes.app" target="_blank" rel="noopener noreferrer">@Chip Rian</a>
+        </footer>
+    </div>
+
+    <div class="update-modal" id="update-modal">
+        <div class="modal-content">
+            <h2>Update Available</h2>
+            <p>A new version of WordJam is available. Refresh to get the latest features and improvements.</p>
+            <div class="modal-buttons">
+                <button class="btn-modal" id="update-refresh-btn">Refresh</button>
+                <button class="btn-modal" id="update-later-btn">Later</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

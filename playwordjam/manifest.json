@@ -1,0 +1,20 @@
+{
+  "name": "WordJam",
+  "short_name": "WordJam",
+  "description": "Word Puzzle Game",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#181826",
+  "theme_color": "#F5C139",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "img/wordjam-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
