@@ -1,4 +1,7 @@
 // Firebase configuration
+// NOTE: The API key below is PUBLIC by design - this is normal for client-side Firebase apps.
+// Security is enforced via Firestore Security Rules, not by hiding the API key.
+// See FIREBASE_SETUP.md for more information.
 const firebaseConfig = {
   apiKey: "AIzaSyDo54C0MEQ2Kiw4jIl1f70aZriR132CzbQ",
   authDomain: "wordslide-game.firebaseapp.com",
