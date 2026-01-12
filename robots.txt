@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /playwordjam/game.html
+
+# Sitemap
+Sitemap: https://chipdoes.app/sitemap.xml
+
