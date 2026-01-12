@@ -44,9 +44,9 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- Steps Counter -->
+    <!-- Vigor -->
     <url>
-        <loc>https://chipdoes.app/steps-counter.html</loc>
+        <loc>https://chipdoes.app/vigor.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
