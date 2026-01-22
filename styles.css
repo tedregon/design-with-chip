@@ -82,6 +82,78 @@ main {
     color: #8a8f98;
 }
 
+.coaching-section {
+    margin-top: 32px;
+    background-color: #141516;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.coaching-text {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.coaching-eyebrow {
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8a8f98;
+}
+
+.coaching-title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.coaching-description {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.coaching-button {
+    display: inline-block;
+    background-color: #4F32D9;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.coaching-button:hover {
+    background-color: #3d26a8;
+}
+
+.coaching-list {
+    flex: 0 1 280px;
+    margin: 0;
+    padding-left: 20px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
 .content-container {
     max-width: 1024px;
     margin: 0 auto;
@@ -664,6 +736,14 @@ main {
     
     .promo-image {
         width: 180px;
+    }
+
+    .coaching-section {
+        padding: 24px;
+    }
+
+    .coaching-list {
+        width: 100%;
     }
 }
 
