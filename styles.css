@@ -1,5 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
+:root {
+    /* Background Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #f8f8f8;
+    --bg-card: #f5f5f5;
+    --bg-card-hover: #e8e8e8;
+    --bg-navbar: #FFFFFF;
+    --bg-promo: #f8f8f8;
+    --bg-phone: #000;
+    --bg-status-bar: #FFFFFF;
+    --bg-bottom-nav: #f8f8f8;
+    
+    /* Text Colors */
+    --text-primary: #061222;
+    --text-secondary: #666666;
+    --text-on-dark: #FFFFFF;
+    --text-on-light: #000000;
+    --text-on-yellow: #000000;
+    
+    /* Border Colors */
+    --border-primary: #e0e0e0;
+    --border-secondary: #f0f0f0;
+    --border-input: #ddd;
+    
+    /* Button & Chip Colors */
+    --chip-green: #4CB221;
+    --chip-purple: #4F32D9;
+    --chip-purple-hover: #3d26a8;
+    --chip-blue: #2184B2;
+    --chip-gray: #616161;
+    --chip-yellow: #F5C139;
+    --chip-yellow-hover: #E5B132;
+    --chip-orange: #FF8C00;
+    --button-blue: #007AFF;
+    
+    /* Gradient Colors */
+    --gradient-start: #3C1F7B;
+    --gradient-end: #E06716;
+    
+    /* Font Family */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    
+    /* Font Sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 22px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 28px;
+    --font-size-4xl: 48px;
+    
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Heights */
+    --line-height-tight: 16px;
+    --line-height-normal: 20px;
+    --line-height-relaxed: 22px;
+    --line-height-loose: 24px;
+    --line-height-body: 1.6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,25 +75,21 @@
 }
 
 body {
-    background-color: #111111;
-    color: #FFFFFF;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-}
-
-a, a:visited {
-    color: #FFFFFF;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    line-height: var(--line-height-body);
 }
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #111111;
+    background-color: var(--bg-navbar);
     display: flex;
     justify-content: center;
     padding: 16px 0;
-    border-bottom: 1px solid #212121;
+    border-bottom: 1px solid var(--border-primary);
 }
 
 .navbar-container {
@@ -38,10 +102,10 @@ a, a:visited {
 }
 
 .logo {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: #FFFFFF;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
@@ -52,11 +116,11 @@ a, a:visited {
 }
 
 .nav-links a {
-    color: #FFFFFF;
+    color: var(--text-primary);
     text-decoration: none;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
     transition: opacity 0.3s ease;
 }
 
@@ -72,20 +136,95 @@ a, a:visited {
 }
 
 main {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-normal);
 }
 
 .intro-section {
-    margin: 40px 0;
-    color: #8a8f98;
+    margin: 0;
+    padding: 24px;
+    max-width: 1024px;
+    max-height: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid var(--border-primary);
+    border-left: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.intro-title {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-body);
+    font-weight: var(--font-weight-medium);
+}
+
+.intro-section p {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-body);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.intro-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.intro-button-primary a {
+    color: var(--bg-primary) !important; 
+}
+
+.intro-button-primary a:visited {
+    color: var(--bg-primary) !important;
+}
+
+.intro-button-primary {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.intro-button-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.intro-button-secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+}
+
+.intro-button-secondary:hover {
+    background-color: var(--bg-card);
+    border-color: var(--text-primary);
 }
 
 .content-container {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 24px;
 }
 
 .cards-section {
@@ -95,7 +234,7 @@ main {
 }
 
 .card {
-    background-color: #141516;
+    background-color: var(--bg-card);
     border-radius: 16px;
     padding: 20px;
     text-align: left;
@@ -107,15 +246,15 @@ main {
 }
 
 .card:hover {
-    background-color: #252729;
+    background-color: var(--bg-card-hover);
 }
 
 .card h3 {
-    color: #FFFFFF;
+    color: var(--text-primary);
 }
 
 .card p {
-    color: #FFFFFF;
+    color: var(--text-primary);
 }
 
 .card-image {
@@ -139,13 +278,13 @@ main {
 }
 
 .card-initials {
-    font-size: 28px;
-    font-weight: 700;
-    color: #FFFFFF;
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
 }
 
 .acting-coach-card {
-    background: linear-gradient(135deg, #3C1F7B 0%, #E06716 100%);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
 }
 
 .card-image img {
@@ -155,10 +294,10 @@ main {
 }
 
 .card-title {
-    font-size: 22px;
-    line-height: 24px;
-    font-weight: 600;
-    color: #FFFFFF;
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
 }
 
 .card-title-link {
@@ -171,20 +310,20 @@ main {
 }
 
 .card-description {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #FFFFFF;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
     margin-bottom: 0;
 }
 
 .card-chip {
     display: inline-block;
-    background-color: #4CB221;
-    color: #FFFFFF;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
+    background-color: var(--chip-green);
+    color: var(--text-on-dark);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+    font-weight: var(--font-weight-normal);
     padding: 4px 12px;
     border-radius: 12px;
     text-decoration: none;
@@ -204,7 +343,7 @@ main {
 /* Promo section styles */
 .promo-section {
     margin-top: 40px;
-    background-color: #181826;
+    background-color: var(--bg-promo);
     border-radius: 16px;
     padding: 40px 20px;
     display: flex;
@@ -257,28 +396,28 @@ main {
 }
 
 .promo-title {
-    font-size: 22px;
-    line-height: 24px;
-    font-weight: 600;
-    color: #FFFFFF;
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
     margin: 0;
 }
 
 .promo-description {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #FFFFFF;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
     margin: 0;
 }
 
 .promo-chip {
     display: inline-block;
     padding: 12px 48px;
-    background-color: #F5C139;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 700;
+    background-color: var(--chip-yellow);
+    color: var(--text-on-yellow);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
     text-decoration: none;
     border-radius: 8px;
     text-align: center;
@@ -288,7 +427,7 @@ main {
 }
 
 .promo-chip:hover {
-    background-color: #E5B132;
+    background-color: var(--chip-yellow-hover);
 }
 
 /* myCommunity page specific styles */
@@ -299,13 +438,13 @@ main {
 }
 
 .beta-button {
-    background-color: #4F32D9;
-    color: #FFFFFF;
+    background-color: var(--chip-purple);
+    color: var(--text-on-dark);
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-left: auto;
@@ -314,7 +453,7 @@ main {
 }
 
 .beta-button:hover {
-    background-color: #3d26a8;
+    background-color: var(--chip-purple-hover);
 }
 
 .appstore-link {
@@ -355,10 +494,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #3C1F7B 0%, #E06716 100%);
-    color: #FFFFFF;
-    font-size: 24px;
-    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: var(--text-on-dark);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
 }
 
 .app-icon.coaching-profile {
@@ -368,45 +507,51 @@ main {
 }
 
 .app-title {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #FFFFFF;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .app-tagline {
-    font-size: 12px;
-    line-height: 16px;
-    color: #8a8f98;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+    color: var(--text-secondary);
     margin-bottom: 8px;
+}
+
+.app-description p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
 }
 
 .app-chip {
     display: inline-block;
-    background-color: #4CB221;
-    color: #FFFFFF;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: 400;
+    background-color: var(--chip-green);
+    color: var(--text-on-dark);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+    font-weight: var(--font-weight-normal);
     padding: 4px 12px;
     border-radius: 12px;
 }
 
 .beta {
-    background-color: #2184B2;
+    background-color: var(--chip-blue);
 }
 
 .development {
-    background-color: #616161;
+    background-color: var(--chip-gray);
 }
 
 .released {
-    background-color: #4CB221;
+    background-color: var(--chip-green);
 }
 
 .try-beta {
-    background-color: #4F32D9;
+    background-color: var(--chip-purple);
 }
 
 .app-description {
@@ -414,9 +559,9 @@ main {
 }
 
 .app-description p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
 }
 
 .mockups-section {
@@ -429,7 +574,7 @@ main {
     display: inline-block;
     width: 280px;
     height: 560px;
-    background-color: #000;
+    background-color: var(--bg-phone);
     border-radius: 40px;
     padding: 8px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -457,9 +602,9 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 12px 20px;
-    background-color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 600;
+    background-color: var(--bg-status-bar);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
 }
 
 .status-icons {
@@ -470,15 +615,15 @@ main {
 .screen-content {
     flex: 1;
     padding: 20px;
-    color: #000;
+    color: var(--text-on-light);
     overflow-y: auto;
 }
 
 .screen-content h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 20px;
-    color: #000;
+    color: var(--text-on-light);
 }
 
 .screen-header {
@@ -490,8 +635,8 @@ main {
 
 .screen-header h2 {
     margin: 0;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
 }
 
 .header-icons {
@@ -508,17 +653,17 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-secondary);
 }
 
 .connect-btn {
-    background-color: #FF8C00;
-    color: #FFFFFF;
+    background-color: var(--chip-orange);
+    color: var(--text-on-dark);
     border: none;
     border-radius: 6px;
     padding: 6px 12px;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
 }
 
 .important-dates {
@@ -526,9 +671,9 @@ main {
 }
 
 .important-dates h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-on-light);
 }
 
 .date-item {
@@ -539,14 +684,14 @@ main {
 }
 
 .date {
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
 }
 
 .event {
-    font-size: 14px;
-    color: #000;
+    font-size: var(--font-size-sm);
+    color: var(--text-on-light);
 }
 
 .friends-list {
@@ -557,9 +702,9 @@ main {
 
 .friend-item {
     padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 14px;
-    color: #000;
+    border-bottom: 1px solid var(--border-secondary);
+    font-size: var(--font-size-sm);
+    color: var(--text-on-light);
 }
 
 .profile-content {
@@ -575,17 +720,17 @@ main {
 }
 
 .field label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
     text-transform: uppercase;
 }
 
 .field input {
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-input);
     border-radius: 6px;
     padding: 8px 12px;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
 }
 
 .section-header {
@@ -596,20 +741,20 @@ main {
 }
 
 .section-header h3 {
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
     text-transform: uppercase;
     margin: 0;
 }
 
 .section-header button {
-    background-color: #007AFF;
-    color: #FFFFFF;
+    background-color: var(--button-blue);
+    color: var(--text-on-dark);
     border: none;
     border-radius: 6px;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: var(--font-size-xs);
 }
 
 .bottom-nav {
@@ -617,9 +762,9 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 12px 0;
-    background-color: #f8f8f8;
-    border-top: 1px solid #e0e0e0;
-    font-size: 18px;
+    background-color: var(--bg-bottom-nav);
+    border-top: 1px solid var(--border-primary);
+    font-size: var(--font-size-md);
 }
 
 .why-section {
@@ -627,16 +772,16 @@ main {
 }
 
 .why-section h2 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #FFFFFF;
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
     margin-bottom: 24px;
 }
 
 .why-section p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
     margin-bottom: 16px;
 }
 
@@ -645,11 +790,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    color: #FFFFFF;
+    color: var(--text-primary);
 }
 
 .feature-list li {
-    line-height: 22px;
+    line-height: var(--line-height-relaxed);
 }
 
 /* Mobile responsive styles for index.html */
