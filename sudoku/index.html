@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku | chipdoes.app</title>
+    <meta name="description" content="Play Sudoku online - a classic number puzzle game.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chipdoes.app/sudoku">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .sudoku-container {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .sudoku-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6DG4FZD75"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Y6DG4FZD75');
+    </script>
+</head>
+<body>
+    <div class="sudoku-container">
+        <iframe 
+            src="https://sudoku-frontend-production-e610.up.railway.app/" 
+            frameborder="0" 
+            allowfullscreen
+            class="sudoku-iframe">
+        </iframe>
+    </div>
+</body>
+</html>
