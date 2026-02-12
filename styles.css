@@ -79,6 +79,7 @@ body {
     color: var(--text-primary);
     font-family: var(--font-family);
     line-height: var(--line-height-body);
+    margin-bottom: 80px;
 }
 
 .navbar {
@@ -133,6 +134,7 @@ body {
     height: 16px;
     margin-left: 4px;
     vertical-align: middle;
+    /* to do - add color that changes with the theme */
 }
 
 main {
@@ -159,7 +161,7 @@ main {
 
 .intro-title {
     font-size: var(--font-size-4xl);
-    line-height: var(--line-height-body);
+    line-height: 56px;
     font-weight: var(--font-weight-medium);
 }
 
@@ -221,6 +223,152 @@ main {
     background-color: var(--bg-card);
     border-color: var(--text-primary);
 }
+
+.work-section {
+    width: 100%;
+    padding: 32px 24px;
+    border-right: 1px solid var(--border-primary);
+    border-left: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.work-section h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.work-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
+    margin-bottom: 32px;
+}
+
+.work-section-cards-2-1 {
+    display: flex;
+    gap: 24px;
+}
+
+.work-section-cards-2-1 > :first-child {
+    flex: 2.3;
+}
+
+.work-section-cards-2-1 > :last-child {
+    flex: 1;
+}
+
+.work-section-card {
+    border-radius: 16px;
+    padding: 24px;
+    height: 536px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-section-card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 72px;
+    margin-bottom: 32px;
+}
+
+.work-section-card h3 {
+    color: var(--text-on-dark);
+    font-size: 20px;
+    list-style: 24px;
+    font-weight: var(--font-weight-semibold);
+
+}
+
+.work-section-card p {
+    color: var(--text-on-dark);
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+.ai-saas-website-review {
+    background: linear-gradient(180deg, #d92b2b 0%, #891236 100%);
+    color: var(--text-on-dark);
+}
+
+.ai-saas-website-review img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.wordjam {
+    background: linear-gradient(180deg, #34344F 0%, #181826 100%);
+    color: var(--text-on-dark);
+
+}
+
+.wordjam img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.work-section-cards-1-1-1 {
+    display: flex;
+    gap: 24px;
+}
+
+.vigor {
+    background: linear-gradient(180deg, #168203 0%, #050805 100%);
+    color: var(--text-on-dark);
+}
+
+.vigor img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.acting-coach {
+    background: linear-gradient(180deg, #3C47BB 0%, #270890 100%);
+    color: var(--text-on-dark);
+}
+
+.acting-coach img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.warm {
+    background: linear-gradient(180deg, #FFDA00 0%, #F27E00 100%);
+    color: var(--text-primary);
+}
+
+.warm h3, .warm p {
+    color: var(--text-primary);
+}
+
+.warm img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* box-shadow: 0 4px 36px 0 rgba(0, 0, 0, 0.25); */
+}
+
+
+
+
 
 .content-container {
     max-width: 1024px;
@@ -430,7 +578,7 @@ main {
     background-color: var(--chip-yellow-hover);
 }
 
-/* myCommunity page specific styles */
+/* Warm page specific styles */
 .nav-right {
     display: flex;
     align-items: center;
@@ -812,3 +960,18 @@ main {
     }
 }
 
+/* SaaS Reviewer Page Styles */
+.saas-reviewer-container {
+    width: 100%;
+    height: calc(100vh - 73px); /* Full height minus navbar */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.saas-reviewer-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
