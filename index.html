@@ -28,6 +28,10 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <script src="js/nav.js" defer></script>
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <!-- end Google Calendar Appointment Scheduling -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6DG4FZD75"></script>
     <script>
@@ -69,120 +73,267 @@
     
     <main>
         <div class="content-container">
-            <div class="intro-section">
-                <h1 class="intro-title">I make complex things simple</h1>
-                <p>And teach others to do the same</p>
-                <div class="intro-buttons">
-                    <a href="portfolioreviewer/" class="intro-button intro-button-primary">Try my Case Study Reviewer</a>
-                    <a href="#apps" class="intro-button intro-button-secondary">View my work</a>                    
+          <section class="coaching-hero" data-name="Hero 1">
+            <div class="coaching-hero-content">
+                <p class="coaching-eyebrow">Product Design Coaching</p>
+                <h1 class="coaching-title">
+                    I help product designers<br>
+                    turn ignored applications<br>
+                    into interview invitations —<br>
+                    and interviews into offers.
+                </h1>
+                <div class="coaching-hero-buttons">
+                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ngDjDjEkZRYRdnUWGRnEp_bHH0pHWHMoQcC44yyCx0xWg_OhgtikV1RYxwUQ8_6A964BAnH5z?gv=true" class="coaching-hero-btn coaching-hero-btn-primary" id="hero-book-session">Book your session</a>
+                    <a href="portfolioreviewer/" class="coaching-hero-btn coaching-hero-btn-secondary">Try my Case Study Reviewer agent</a>
                 </div>
+                <p class="coaching-hero-subtext">First 30-minute session is free</p>
             </div>
-            <div class="work-section">
-                <div class="work-section-header">
-                    <h2>My Work</h2>
-                    <p>Self-employed products built <span style="color: var(--text-secondary);">Sep 2025 - present</span></p>
-                </div>
-                <div class="work-section-cards-2-1">
-                    <a href="saas-reviewer/" class="work-section-card ai-saas-website-review">
-                        <div class="work-section-card-description">
-                            <h3>AI SaaS Website Review</h3>
-                            <p>Review SaaS website pages with detailed analysis</p>
-                        </div>
-                        <img src="img/homepage-saas-reviewer.png" alt="WordJam">
-                    </a>
-                    <a href="wordjam/" class="work-section-card wordjam">
-                        <div class="work-section-card-description">
-                            <h3>WordJam</h3>
-                            <p>Word game to keep your brain challenged</p>
-                        </div>
-                        <img src="img/homepage-wordjam.png" alt="WordJam">
-                    </a>
-                </div>
-                <div class="work-section-cards-1-1-1">
-                    <a href="vigor/" class="work-section-card vigor">
-                        <div class="work-section-card-description">
-                            <h3>Vigor</h3>
-                            <p>Take charge of your health</p>
-                        </div>
-                        <img src="img/homepage-vigor.png" alt="WordJam">
-                    </a>
-                    <a href="acting-coach/" class="work-section-card acting-coach">
-                        <div class="work-section-card-description">
-                            <h3>Acting Coach</h3>
-                            <p>Explore your range.<br>harpen your delivery</p>
-                        </div>
-                        <img src="img/homepage-acting-coach.png" alt="WordJam">
-                    </a>
-                    <a href="mycommunity/" class="work-section-card warm">
-                        <div class="work-section-card-description">
-                            <h3>Warm</h3>
-                            <p>Solve your loneliness through intentional connections</p>
-                        </div>
-                        <img src="img/homepage-warm.png" alt="WordJam">
-                    </a>
-                </div>
+            <div class="coaching-hero-photo">
+                <img src="img/profile-pic.png" alt="Chip Rian">
             </div>
-            <!-- Apps Section -->
-            <!-- <div id="apps" class="promo-section">
-                <a href="playwordjam/index.html" class="promo-card">
-                    <div class="promo-image">
-                        <img src="playwordjam/img/home-page-logo.png" alt="WordJam">
-                    </div>
-                    <div class="promo-content">
-                        <h3 class="promo-title">WordJam Online</h3>
-                        <p class="promo-description">Daily word puzzle game.</p>
-                        <span class="promo-chip">Play</span>
-                    </div>
-                </a>
-            </div> -->
-            <!-- <div class="cards-section">
-                    <div class="card">
-                    <a href="mycommunity.html" class="card-image">
-                            <img src="img/myCommunity-logo.png" alt="Warm">
-                    </a>
-                    <div class="card-content">
-                        <a href="mycommunity.html" class="card-title-link"><h3 class="card-title">Warm</h3></a>
-                        <p class="card-description">Solve loneliness through intentional connections</p>
-                        <span class="card-chip development">development</span>
+        </section>
+
+            <section class="coaching-section problem-section" data-name="The problem" aria-labelledby="problem-heading">
+                <div class="problem-section-inner">
+                    <h2 id="problem-heading" class="problem-heading">The problem</h2>
+                    <div class="problem-body">
+                        <p>You've sent out dozens of applications.</p>
+                        <p>Silence.</p>
+                        <p>Or worse — you get through portfolio review… and then nothing.</p>
+                        <p>It's frustrating. Confusing. And it makes you question your level.</p>
+                        <p>But here's what's actually happening:</p>
+                        <ul>
+                            <li>Hiring managers aren't rejecting you because you lack skill.</li>
+                            <li>They're rejecting you because your portfolio and storytelling don't clearly demonstrate your design thinking.</li>
+                        </ul>
+                        <p>And if that signal isn't obvious in the first few minutes, you don't move forward.</p>
+                        <p>I know — because I've reviewed 1,000+ portfolios and hired many designers myself.</p>
                     </div>
                 </div>
-                
-                    <div class="card">
-                    <a href="vigor.html" class="card-image">
-                            <img src="img/steps-counter-logo.png" alt="stepsCounter">
-                    </a>
-                    <div class="card-content">
-                        <a href="vigor.html" class="card-title-link"><h3 class="card-title">Vigor</h3></a>
-                        <p class="card-description">Take charge of your health</p>
-                        <a href="https://apps.apple.com/gb/app/vigor-steps-counter/id6744516514" target="_blank" class="card-chip released">get it on the App Store</a>
+            </section>
+
+            <section class="testimonials-section" data-name="Testimonials 1" aria-labelledby="testimonials-heading">
+                <div class="testimonials-section-header">
+                    <h2 id="testimonials-heading" class="testimonials-heading">What people are saying</h2>
+                    <div class="testimonials-carousel-nav" aria-hidden="true">
+                        <button type="button" class="testimonials-nav-btn coaching-carousel-prev" aria-label="Previous testimonial">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <button type="button" class="testimonials-nav-btn coaching-carousel-next" aria-label="Next testimonial">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
                     </div>
                 </div>
+                <div class="testimonials-cards-wrap">
+                    <div class="coaching-testimonials-track" id="coaching-testimonials" aria-label="Testimonials carousel"></div>
+                </div>
+            </section>
+
+            <section class="calls-section" data-name="Why you're not getting calls" aria-labelledby="calls-heading">
+                <div class="calls-section-header">
+                    <h2 id="calls-heading" class="calls-heading">Why you're not getting calls</h2>
+                    <p class="calls-intro">After 12+ years in product design — across startups and billion-pound businesses — I see the same 3 issues repeatedly:</p>
+                </div>
+                <div class="calls-cards">
+                    <div class="calls-card">
+                        <h3 class="calls-card-title">No visible impact</h3>
+                        <div class="calls-card-body">
+                            <p>You describe what you did.<br>But not why it mattered.</p>
+                            <p>No measurable outcomes.<br>No business reasoning.<br>No clear ownership.</p>
+                            <p>Design roles require business impact clarity.</p>
+                        </div>
+                    </div>
+                    <div class="calls-card">
+                        <h3 class="calls-card-title">Confusing storytelling</h3>
+                        <div class="calls-card-body">
+                            <p>Your case studies read like documentation or marketing brochures.</p>
+                            <p>Too much detail in the wrong places.<br>Not enough clarity around the problem, constraints, trade-offs, and decisions.</p>
+                            <p>Hiring managers scan quickly. If the signal isn't sharp, they move on.</p>
+                        </div>
+                    </div>
+                    <div class="calls-card">
+                        <h3 class="calls-card-title">Lack of intention</h3>
+                        <div class="calls-card-body">
+                            <p>Designers don't just execute.</p>
+                            <p>They:</p>
+                            <ul>
+                                <li>Frame problems</li>
+                                <li>Identify trade-offs</li>
+                                <li>Drive decisions</li>
+                                <li>Align stakeholders</li>
+                            </ul>
+                            <p>If your portfolio doesn't show intentional product thinking, you won't be invited to interviews.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="coaching-section hidden">
+                <h2>Try my Case Study Reviewer agent</h2>
+                <p>Short description of what you can get from it.</p>
             </div>
-            <div class="cards-section" style="margin-top: 8px;">
-                
-                <div class="card">
-                    <a href="acting-coach.html" class="card-image">
-                        <img src="img/acting-coach-logo.png" alt="Acting Coach">
-                    </a>
-                    <div class="card-content">
-                        <a href="acting-coach.html" class="card-title-link"><h3 class="card-title">Acting Coach</h3></a>
-                        <p class="card-description">Explore your range. Sharpen your delivery.</p>
-                        <span class="card-chip released">get it on the App Store</span>
+
+            <section class="fix-it-section" data-name="What we do to fix it" aria-labelledby="fix-it-heading">
+                <div class="fix-it-inner">
+                    <h2 id="fix-it-heading" class="fix-it-heading">What we do to fix it</h2>
+                    <div class="fix-it-body">
+                        <p class="fix-it-intro">This is 1:1, tailored mentorship. Each session, we identify and systematically close the gaps.</p>
+                        <p class="fix-it-subhead">What we'll focus on:</p>
+                        <div class="fix-it-grid">
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Deep portfolio restructuring</span>
+                            </div>
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>CV review</span>
+                            </div>
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Case study reframing</span>
+                            </div>
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Interview simulation</span>
+                            </div>
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Impact articulation</span>
+                            </div>
+                            <div class="fix-it-item">
+                                <svg class="fix-it-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Design challenge simulation</span>
+                            </div>
+                        </div>
+                        <p class="fix-it-outro">Every session increases clarity, positioning, and conversion strength.</p>
                     </div>
                 </div>
-                
-                    <div class="card">
-                    <a href="wordjam.html" class="card-image">
-                            <img src="img/wordjam-logo.png" alt="wordJam">
-                    </a>
-                    <div class="card-content">
-                        <a href="wordjam.html" class="card-title-link"><h3 class="card-title">WordJam App</h3></a>
-                        <p class="card-description">Word game to keep your brain challenged</p>
-                        <a href="https://testflight.apple.com/join/5GvqTp8w" target="_blank" class="card-chip try-beta">try the beta</a>
-                    </div>
-                </div>
+            </section>
+
+            <div class="coaching-section hidden">
+                <h2>Find me on socials</h2>
+                <p>List of social media icons</p>
             </div>
-        </div> -->
+
+            <section class="changes-section" data-name="What changes after working together" aria-labelledby="changes-heading">
+                <div class="changes-inner">
+                    <h2 id="changes-heading" class="changes-heading">What changes after working together</h2>
+                    <div class="changes-row">
+                        <div class="changes-list-wrap">
+                            <p class="changes-intro">You will:</p>
+                            <ul class="changes-list">
+                                <li>Present case studies with confidence and structure</li>
+                                <li>Clearly articulate impact and trade-offs</li>
+                                <li>Understand what hiring managers look for</li>
+                                <li>Position yourself correctly for senior roles</li>
+                                <li>Increase interview invitations</li>
+                                <li>Perform stronger during panel interviews</li>
+                            </ul>
+                        </div>
+                        <div class="changes-cta-box">
+                            <p class="changes-cta-label">The goal is simple</p>
+                            <p class="changes-cta-line">You stop being ignored.</p>
+                            <p class="changes-cta-line">You start getting offers.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="book-cta-section" data-name="Book your first session" aria-labelledby="book-cta-heading">
+                <div class="book-cta-content">
+                    <h2 id="book-cta-heading" class="book-cta-heading">Book your first session</h2>
+                </div>
+                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ngDjDjEkZRYRdnUWGRnEp_bHH0pHWHMoQcC44yyCx0xWg_OhgtikV1RYxwUQ8_6A964BAnH5z?gv=true" class="book-cta-btn" id="footer-book-session">Book your session</a>
+            </section>
+        </div>
     </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var track = document.getElementById('coaching-testimonials');
+        var carousel = track && track.closest('.testimonials-section');
+        if (!track || !carousel) return;
+
+        fetch('coaching/testimonials.json')
+          .then(function (response) {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+          })
+          .then(function (data) {
+            if (!Array.isArray(data)) return;
+
+            var visibleTestimonials = data.filter(function (t) { return t.visible; });
+            if (!visibleTestimonials.length) {
+              carousel.style.display = 'none';
+              return;
+            }
+
+            track.innerHTML = '';
+
+            visibleTestimonials.forEach(function (t) {
+              var item = document.createElement('div');
+              item.className = 'coaching-testimonial';
+
+              var quote = document.createElement('p');
+              quote.className = 'coaching-testimonial-quote';
+              quote.textContent = '"' + t.quote + '"';
+
+              var metaWrapper = document.createElement('div');
+              metaWrapper.className = 'coaching-testimonial-meta';
+              var name = document.createElement('p');
+              name.className = 'coaching-testimonial-name';
+              name.textContent = t.name;
+              var role = document.createElement('p');
+              role.className = 'coaching-testimonial-role';
+              role.textContent = t.role;
+              metaWrapper.appendChild(name);
+              metaWrapper.appendChild(role);
+
+              item.appendChild(quote);
+              item.appendChild(metaWrapper);
+              track.appendChild(item);
+            });
+
+            var prevBtn = carousel.querySelector('.coaching-carousel-prev');
+            var nextBtn = carousel.querySelector('.coaching-carousel-next');
+            var scrollAmount = function () {
+              var card = track.querySelector('.coaching-testimonial');
+              return card ? card.offsetWidth + 24 : 320;
+            };
+            if (prevBtn) {
+              prevBtn.addEventListener('click', function () {
+                track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+              });
+            }
+            if (nextBtn) {
+              nextBtn.addEventListener('click', function () {
+                track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+              });
+            }
+          })
+          .catch(function () {});
+
+        var bookingScheduleUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2ngDjDjEkZRYRdnUWGRnEp_bHH0pHWHMoQcC44yyCx0xWg_OhgtikV1RYxwUQ8_6A964BAnH5z?gv=true';
+        function attachBookingButton(id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (window.calendar && window.calendar.schedulingButton) {
+              calendar.schedulingButton.open({
+                url: bookingScheduleUrl,
+                color: '#039BE5',
+                label: 'Book an appointment'
+              });
+            } else {
+              window.location.href = bookingScheduleUrl;
+            }
+          });
+        }
+
+        attachBookingButton('hero-book-session');
+        attachBookingButton('footer-book-session');
+      });
+    </script>
 </body>
 </html>

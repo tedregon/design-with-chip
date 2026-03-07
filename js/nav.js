@@ -26,7 +26,7 @@
     function generateNav() {
         const prefix = getPathPrefix();
         const logoLink = prefix ? prefix + 'index.html' : 'index.html';
-        const coachingLink = prefix + 'coaching/';
+        const workLink = prefix + 'work/';
         const imgPath = prefix + 'img/ArrowUpRight.svg';
         
         return `
@@ -34,7 +34,7 @@
         <div class="navbar-container">
             <a href="${logoLink}" class="logo">Chip Rian</a>
             <ul class="nav-links">
-                <li><a href="${coachingLink}">Coaching</a></li>
+                <!-- <li><a href="${workLink}">My work</a></li> -->
                 <li><a href="https://www.linkedin.com/in/chip-rian/" target="_blank">Contact <img src="${imgPath}" alt="" class="nav-icon"></a></li>
             </ul>
         </div>

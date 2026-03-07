@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..700&display=swap');
 
 :root {
     /* Background Colors */
@@ -42,6 +42,11 @@
     
     /* Font Family */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-nunito: 'Nunito Sans', var(--font-family);
+    
+    /* Hero (Figma 127:743) */
+    --hero-primary: #393bb4;
+    --hero-border: #b8cadb;
     
     /* Font Sizes */
     --font-size-xs: 12px;
@@ -75,11 +80,15 @@
 }
 
 body {
-    background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-family);
     line-height: var(--line-height-body);
     margin-bottom: 80px;
+    background: #f5f7fa;
+}
+
+.hidden {
+    display: none;
 }
 
 .navbar {
@@ -147,16 +156,16 @@ main {
     margin: 0;
     padding: 24px;
     max-width: 1024px;
-    max-height: 600px;
-    height: 100vh;
+    /* max-height: 600px;
+    height: 100vh; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
-    text-align: center;
-    border-right: 1px solid var(--border-primary);
+    text-align: center; */
+    /* border-right: 1px solid var(--border-primary);
     border-left: 1px solid var(--border-primary);
-    border-bottom: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary); */
 }
 
 .intro-title {
@@ -227,9 +236,9 @@ main {
 .work-section {
     width: 100%;
     padding: 32px 24px;
-    border-right: 1px solid var(--border-primary);
+    /* border-right: 1px solid var(--border-primary);
     border-left: 1px solid var(--border-primary);
-    border-bottom: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary); */
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -371,7 +380,10 @@ main {
 
 .content-container {
     max-width: 1024px;
-    margin: 0 auto;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .cards-section {
@@ -654,16 +666,17 @@ main {
 }
 
 .app-title {
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-loose);
-    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-4xl);
+    line-height: 56px;
+    font-weight: var(--font-weight-medium);
     color: var(--text-primary);
     margin-bottom: 8px;
 }
 
 .app-tagline {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-tight);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-body);
+    font-weight: var(--font-weight-normal);
     color: var(--text-secondary);
     margin-bottom: 8px;
 }
@@ -919,8 +932,9 @@ main {
 }
 
 .why-section h2 {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-bold);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: var(--font-weight-normal);
     color: var(--text-primary);
     margin-bottom: 24px;
 }
@@ -944,8 +958,804 @@ main {
     line-height: var(--line-height-relaxed);
 }
 
-/* Mobile responsive styles for index.html */
-@media (max-width: 650px) {
+/* Home hero – Figma node 127:743 (Hero 1) */
+.coaching-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 80px 48px;
+    background-color: var(--bg-primary);
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.coaching-hero-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.coaching-eyebrow {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.coaching-title {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.coaching-hero-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.coaching-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.09px;
+    line-height: 1.45;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease;
+}
+
+.coaching-hero-btn:hover {
+    opacity: 0.9;
+}
+
+.coaching-hero-btn-primary {
+    background-color: var(--hero-primary);
+    color: var(--text-on-dark);
+}
+
+.coaching-hero-btn-secondary {
+    background-color: transparent;
+    color: var(--hero-primary);
+    border: 1px solid var(--hero-primary);
+}
+
+.coaching-hero-subtext {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.coaching-hero-photo {
+    flex-shrink: 0;
+    width: 320px;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.coaching-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coaching-hero-cta {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+}
+
+.coaching-hero-cta .coaching-cta-title {
+    margin-bottom: 12px;
+}
+
+.coaching-hero-cta .coaching-cta-text {
+    padding-bottom: 20px;
+}
+
+.coaching-hero-details-link {
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+}
+
+.coaching-hero-details-link a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
+.coaching-info {
+    flex: 1;
+}
+
+.coaching-tagline {
+    font-size: var(--font-size-lg);
+    line-height: 28px;
+    font-weight: var(--font-weight-normal);
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+/* Same bordered, padded block as .work-section on main index */
+.coaching-section {
+    width: 100%;
+    padding: 72px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.coaching-section.hidden {
+    display: none;
+}
+
+.coaching-section h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.coaching-section > p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-normal);
+    color: var(--text-primary);
+    margin-bottom: 0;
+}
+
+/* The problem section – Figma node 127:755 */
+.problem-section {
+    background-color: var(--bg-primary);
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    overflow: hidden;
+}
+
+.problem-section-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 100%;
+}
+
+.problem-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.problem-body {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.problem-body p {
+    margin: 0 0 8px 0;
+}
+
+.problem-body p:last-of-type {
+    margin-bottom: 0;
+}
+
+.problem-body ul {
+    margin: 0 0 8px 0;
+    padding-left: 24px;
+    list-style: disc;
+}
+
+.problem-body ul li {
+    margin-bottom: 4px;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.problem-body ul li:last-child {
+    margin-bottom: 0;
+}
+
+.coaching-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.coaching-section p:last-of-type {
+    margin-bottom: 0;
+}
+
+.coaching-note {
+    margin-top: 24px;
+}
+
+/* Why you're not getting calls – Figma node 127:793 */
+.calls-section {
+    background-color: var(--bg-primary);
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    overflow: hidden;
+}
+
+.calls-section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.calls-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.calls-intro {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.calls-cards {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.calls-card {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: #eff2f5;
+    border: 0.5px solid var(--hero-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calls-card-title {
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.calls-card-body {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.calls-card-body p {
+    margin: 0 0 8px 0;
+}
+
+.calls-card-body p:last-of-type {
+    margin-bottom: 0;
+}
+
+.calls-card-body ul {
+    margin: 0 0 8px 0;
+    padding-left: 24px;
+    list-style: disc;
+}
+
+.calls-card-body ul li {
+    margin-bottom: 4px;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.calls-card-body ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* What we do to fix it – Figma node 127:824 */
+.fix-it-section {
+    background-color: var(--bg-primary);
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    overflow: hidden;
+}
+
+.fix-it-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.fix-it-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.fix-it-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fix-it-intro {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.fix-it-subhead {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.fix-it-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.fix-it-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #eff2f5;
+    border-radius: 12px;
+}
+
+.fix-it-arrow {
+    flex-shrink: 0;
+    color: var(--hero-primary);
+}
+
+.fix-it-item span {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.fix-it-outro {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* What changes after working together – Figma node 127:1837 */
+.changes-section {
+    background-color: var(--bg-primary);
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    overflow: hidden;
+}
+
+.changes-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.changes-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.changes-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.changes-list-wrap {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.changes-intro {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.changes-list {
+    margin: 0;
+    padding-left: 24px;
+    list-style: disc;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+}
+
+.changes-list li {
+    margin-bottom: 4px;
+}
+
+.changes-list li:last-child {
+    margin-bottom: 0;
+}
+
+.changes-cta-box {
+    flex: 1 1 0;
+    min-width: 0;
+    background-color: var(--hero-primary);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.changes-cta-label {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-on-dark);
+    margin: 0;
+}
+
+.changes-cta-line {
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: var(--text-on-dark);
+    margin: 0;
+}
+
+/* Book your first session – Figma node 127:1849 */
+.book-cta-section {
+    background-color: #eff2f5;
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    overflow: hidden;
+}
+
+.book-cta-content {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.book-cta-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.book-cta-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background-color: var(--hero-primary);
+    color: var(--text-on-dark);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.09px;
+    line-height: 1.45;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s ease;
+}
+
+.book-cta-btn:hover {
+    opacity: 0.9;
+}
+
+.coaching-feature-list {
+    margin: 12px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-primary);
+}
+
+.coaching-feature-list li {
+    line-height: var(--line-height-relaxed);
+}
+
+.coaching-cta-box {
+    margin: 0;
+    padding: 24px;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.coaching-cta-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.coaching-cta-title {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-loose);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.coaching-cta-text {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+/* Testimonials section – Figma node 127:763 */
+.testimonials-section {
+    background-color: #eff2f5;
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    overflow: hidden;
+}
+
+.testimonials-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    width: 100%;
+}
+
+.testimonials-heading {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.testimonials-carousel-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.testimonials-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #d9d9d9;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.testimonials-nav-btn:hover {
+    background-color: var(--bg-card);
+    border-color: var(--hero-border);
+}
+
+.testimonials-cards-wrap {
+    width: 100%;
+    min-height: 0;
+}
+
+.coaching-testimonials-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+}
+
+.coaching-testimonials-track::-webkit-scrollbar {
+    display: none;
+}
+
+.coaching-testimonial {
+    flex: 0 0 auto;
+    width: min(380px, 85vw);
+    min-height: 200px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 0.5px solid var(--hero-border);
+    border-radius: 12px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.coaching-testimonial-quote {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0 0 16px 0;
+    flex: 1;
+}
+
+.coaching-testimonial-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: auto;
+}
+
+.coaching-testimonial-name {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.coaching-testimonial-role {
+    font-family: var(--font-nunito);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #5b6c80;
+    margin: 4px 0 0 0;
+}
+
+.testimonials-nav-btn svg {
+    flex-shrink: 0;
+}
+
+.coaching-community-block {
+    text-align: center;
+}
+
+.coaching-community-label {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-loose);
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.coaching-community-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.coaching-community-link-wrap {
+    margin-top: 16px;
+}
+
+.coaching-community-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+}
+
+.coaching-community-link-icon {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.coaching-community-caption {
+    margin-top: 12px;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* Mobile responsive styles for homepage/coaching layout */
+@media (max-width: 799px) {
     .intro-buttons {
         flex-direction: column;
     }
@@ -1052,6 +1862,142 @@ main {
 
     .intro-title {
         line-height: 36px;
+    }
+    
+    .app-title {
+        line-height: 36px;
+    }
+    
+    .why-section h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .coaching-title {
+        line-height: 36px;
+    }
+    
+    .coaching-section h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .problem-section {
+        padding: 48px 24px;
+    }
+
+    .problem-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .testimonials-section {
+        padding: 48px 24px;
+    }
+
+    .testimonials-section-header {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .testimonials-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .coaching-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        padding: 48px 24px;
+    }
+
+    .coaching-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .coaching-hero-btn {
+        width: 100%;
+    }
+
+    .coaching-hero-photo {
+        width: 280px;
+        height: 280px;
+        order: -1;
+    }
+
+    .calls-section {
+        padding: 48px 24px;
+    }
+
+    .calls-cards {
+        flex-direction: column;
+    }
+
+    .calls-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .fix-it-section {
+        padding: 48px 24px;
+    }
+
+    .fix-it-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .fix-it-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .changes-section {
+        padding: 48px 24px;
+    }
+
+    .changes-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .changes-row {
+        flex-direction: column;
+    }
+
+    .book-cta-section {
+        flex-direction: column;
+        padding: 48px 24px;
+        gap: 24px;
+    }
+
+    .book-cta-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-cta-heading {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .book-cta-btn {
+        width: 100%;
+    }
+
+    .coaching-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .coaching-icon {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .coaching-hero, .problem-section, .calls-section, .fix-it-section, .changes-section, .book-cta-section, .testimonials-section {
+        border-radius: 0px;
     }
 }
 
