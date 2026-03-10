@@ -2016,3 +2016,24 @@ main {
     border: none;
     display: block;
 }
+
+/* Portfolio page – embedded Figma site */
+.portfolio-main {
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-embed {
+    position: relative;
+    height: calc(100vh - 64px);
+    min-height: 400px;
+}
+
+.portfolio-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
