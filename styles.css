@@ -2018,20 +2018,33 @@ main {
 }
 
 /* Portfolio page – embedded Figma site */
-.portfolio-main {
+body.portfolio-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 0;
+}
+
+body.portfolio-page .portfolio-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
+    min-height: 0;
 }
 
-.portfolio-embed {
+body.portfolio-page .portfolio-embed {
+    flex: 1;
     position: relative;
-    height: calc(100vh - 64px);
-    min-height: 400px;
+    min-height: 0;
+    width: 100%;
 }
 
-.portfolio-embed iframe {
+body.portfolio-page .portfolio-embed iframe {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border: none;
