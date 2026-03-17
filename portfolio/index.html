@@ -17,16 +17,30 @@
     <div id="nav-placeholder"></div>
     
     <main class="portfolio-main">
-        <p class="portfolio-gate-notice" role="status">
-            If the password prompt doesn&apos;t work below, <a href="https://broad-trait-75331834.figma.site/" target="_blank" rel="noopener">open the portfolio in a new tab</a> to enter the password there.
-        </p>
-        <div class="portfolio-embed">
-            <iframe
-                id="portfolio-iframe"
-                src="https://broad-trait-75331834.figma.site/"
-                title="Portfolio – Figma"
-                allowfullscreen
-           ></iframe>
+        <div class="content-container">
+            <section class="portfolio-hero">
+                <p class="portfolio-eyebrow">Case studies</p>
+                <h1 class="portfolio-title">Selected product design work</h1>
+                <p class="portfolio-intro">
+                    A closer look at how I think, ship, and iterate on real products — from initial problem framing through launch.
+                </p>
+            </section>
+
+            <section class="portfolio-grid" aria-label="Case studies">
+                <a class="portfolio-card-link" href="/portfolio/drafts/">
+                    <article class="portfolio-card">
+                        <img src="../img/case-study-drafts.png" alt="Preview of drafts and explorations case studies" class="portfolio-card-image">
+                        <h2 class="portfolio-card-title">Transforming Jigsaw from a Diagramming Tool into a Centralised Collaboration Hub</h2>
+                    </article>
+                </a>
+
+                <a class="portfolio-card-link" href="/portfolio/mobile/">
+                    <article class="portfolio-card">
+                        <img src="../img/case-study-mobile.png" alt="Preview of mobile case study" class="portfolio-card-image">
+                        <h2 class="portfolio-card-title">De-risking Enterprise Renewals for High-Stakes Legal Teams</h2>
+                    </article>
+                </a>
+            </section>
         </div>
     </main>
 </body>
