@@ -2318,6 +2318,7 @@ body.portfolio-page .portfolio-main {
     max-width: 100%;
     margin: 0;
     gap: 0;
+    padding: 0;
 }
 
 .portfolio-back-button-container {
