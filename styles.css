@@ -2081,6 +2081,376 @@ body.portfolio-page .portfolio-main {
     color: inherit;
 }
 
+.acting-coach-screens {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.acting-coach-screens img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    border: 0.5px solid var(--hero-border);
+    background-color: var(--bg-primary);
+}
+
+@media (max-width: 799px) {
+    .acting-coach-screens {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Acting Coach page – Figma node 134:723 */
+body.acting-coach-page {
+    background: #f8fafb;
+}
+
+.acting-coach-landing {
+    max-width: 897px;
+    margin: 0 auto;
+    padding: 80px 24px 0;
+}
+
+.acting-coach-hero,
+.acting-coach-story {
+    display: flex;
+    justify-content: center;
+}
+
+.acting-coach-hero-inner {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.acting-coach-hero-title {
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 32px;
+    letter-spacing: -0.12px;
+    color: #061b31;
+    text-align: center;
+    margin: 0;
+}
+
+.acting-coach-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background: #ffffff;
+    border: 0.5px solid #393bb4;
+    color: #393bb4;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.09px;
+    line-height: 1.45;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.acting-coach-primary-btn:hover {
+    opacity: 0.92;
+}
+
+.acting-coach-btn-icon {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.acting-coach-btn-icon img {
+    width: 16px;
+    height: 26px;
+    display: block;
+}
+
+.acting-coach-phone-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.acting-coach-phone-stack {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.acting-coach-phone-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8px;
+    background: transparent;
+}
+
+.acting-coach-phone {
+    width: 300px;
+    height: 435px;
+    overflow: hidden;
+    margin: 0;
+    background: transparent;
+}
+
+.acting-coach-phone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.acting-coach-callout {
+    position: absolute;
+    top: 150px;
+    font-family: var(--font-nunito);
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.075px;
+    line-height: 18px;
+    color: #828b94;
+    white-space: nowrap;
+}
+
+.acting-coach-callout-left {
+    left: 0;
+    transform: translateX(-40%);
+    text-align: right;
+}
+
+.acting-coach-callout-right {
+    right: 0;
+    transform: translateX(40%);
+    text-align: left;
+}
+
+.acting-coach-divider {
+    width: 100%;
+    max-width: 650px;
+    height: 1px;
+    background: #ffffff;
+}
+
+.acting-coach-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: 100%;
+}
+
+.acting-coach-category-pill {
+    width: 555px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 80px;
+    background-color: #700000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    will-change: background-color;
+}
+
+.acting-coach-category-pill.is-books {
+    background-color: #2229a1;
+}
+
+.acting-coach-category-pill.is-games {
+    background-color: #005340;
+}
+
+.acting-coach-category-pill.is-your-own {
+    background-color: #b27300;
+}
+
+.acting-coach-category {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 72px;
+    transition: color 0.2s ease;
+}
+
+.acting-coach-category-active {
+    /* active styling (bg + text color) is theme-specific via .acting-coach-category-pill.is-* */
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.acting-coach-category-pill.is-movies .acting-coach-category-active {
+    background-color: #b61e3f;
+    color: #ffbbc6;
+}
+
+.acting-coach-category-pill.is-books .acting-coach-category-active {
+    background-color: #4c4ac7;
+    color: #b3deff;
+}
+
+.acting-coach-category-pill.is-games .acting-coach-category-active {
+    background-color: #027368;
+    color: #8affc1;
+}
+
+.acting-coach-category-pill.is-your-own .acting-coach-category-active {
+    background-color: #e0950c;
+    color: #fff0d4;
+}
+
+.acting-coach-category-icon {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+}
+
+.acting-coach-category-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.acting-coach-category-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.acting-coach-category-icon svg path {
+    transition: fill 0.2s ease;
+}
+
+/* Tab icon colors (SVGs use `fill="var(--fill-0, ...)"`) */
+.acting-coach-category[data-category="movies"]:not(.acting-coach-category-active) .acting-coach-category-icon {
+    --fill-0: rgba(255, 255, 255, 0.9);
+}
+
+.acting-coach-category[data-category="movies"].acting-coach-category-active .acting-coach-category-icon {
+    --fill-0: #FFBBC6;
+}
+
+/* svg icons for these tabs have fill-opacity=0.9, so use solid hex without alpha */
+.acting-coach-category[data-category="books"].acting-coach-category-active .acting-coach-category-icon {
+    --fill-0: #b3deff;
+}
+.acting-coach-category[data-category="books"]:not(.acting-coach-category-active) .acting-coach-category-icon {
+    --fill-0: #ffffff;
+}
+
+.acting-coach-category[data-category="games"].acting-coach-category-active .acting-coach-category-icon {
+    --fill-0: #8affc1;
+}
+.acting-coach-category[data-category="games"]:not(.acting-coach-category-active) .acting-coach-category-icon {
+    --fill-0: #ffffff;
+}
+
+.acting-coach-category[data-category="your-own"].acting-coach-category-active .acting-coach-category-icon {
+    --fill-0: #fff0d4;
+}
+.acting-coach-category[data-category="your-own"]:not(.acting-coach-category-active) .acting-coach-category-icon {
+    --fill-0: #ffffff;
+}
+
+.acting-coach-category-label {
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.065px;
+    line-height: 16px;
+}
+
+.acting-coach-categories-hint {
+    font-family: var(--font-nunito);
+    font-size: 15px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.075px;
+    line-height: 36px;
+    color: #828b94;
+    text-align: center;
+    margin: 0;
+}
+
+.acting-coach-story {
+    margin-top: 120px;
+    padding-bottom: 40px;
+}
+
+.acting-coach-story-inner {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+}
+
+.acting-coach-story-title {
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 32px;
+    letter-spacing: -0.12px;
+    color: #061b31;
+    margin: 0;
+}
+
+.acting-coach-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    display: block;
+}
+
+.acting-coach-story-body {
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: var(--font-weight-normal);
+    line-height: 32px;
+    letter-spacing: -0.1px;
+    color: #061b31;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .acting-coach-landing {
+        padding-top: 64px;
+    }
+
+    .acting-coach-callout-left,
+    .acting-coach-callout-right {
+        display: none;
+    }
+}
+
 .portfolio-card {
     border-radius: 16px;
     display: flex;

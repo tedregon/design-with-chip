@@ -62,75 +62,170 @@
     }
     </script>
 </head>
-<body>
+<body class="acting-coach-page">
     <div id="nav-placeholder"></div>
     
     <main>
-        <div class="content-container">
-            <div class="app-intro">
-                <div class="app-header">
-                    <div class="app-icon">
-                        <img src="../img/acting-coach-logo.png" alt="Acting Coach logo">
+        <div class="acting-coach-landing">
+            <section class="acting-coach-hero" aria-labelledby="acting-coach-hero-heading">
+                <div class="acting-coach-hero-inner">
+                    <h1 id="acting-coach-hero-heading" class="acting-coach-hero-title">
+                        Expand your range.<br>
+                        Challenge your delivery.
+                    </h1>
+
+                    <a
+                        href="https://apps.apple.com/us/app/acting-coach/id6756844103"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="acting-coach-primary-btn"
+                    >
+                        <span class="acting-coach-btn-icon" aria-hidden="true">
+                            <img src="../img/acting-coach-apple-badge.svg" alt="" loading="lazy">
+                        </span>
+                        Download Acting Coach
+                    </a>
+
+                    <div class="acting-coach-phone-block" aria-label="Acting Coach preview">
+                        <div class="acting-coach-phone-stack">
+                            <div class="acting-coach-phone-wrap">
+                                <!-- <p class="acting-coach-callout acting-coach-callout-left">tap on the emotion<br>to change</p> -->
+                                <figure class="acting-coach-phone">
+                                    <img id="acting-coach-phone-preview" src="../img/acting-coach-screen-1-1.png" alt="Acting Coach app preview on iPhone">
+                                </figure>
+                                <!-- <p class="acting-coach-callout acting-coach-callout-right">tap on the phrase<br>to change</p> -->
+                            </div>
+
+                            <div class="acting-coach-divider" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="acting-coach-categories">
+                            <div class="acting-coach-category-pill is-movies" role="group" aria-label="Categories" id="acting-coach-category-pill">
+                                <button type="button" class="acting-coach-category acting-coach-category-active" data-category="movies" aria-pressed="true">
+                                    <span class="acting-coach-category-icon" aria-hidden="true">
+                                        <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Frame 60">
+                                                <path id="movies-icon" d="M8.69727 30.9395C7.13867 30.9395 6.11914 29.9316 6.11914 28.3965V11.6035C6.11914 10.0684 7.13867 9.06055 8.69727 9.06055H31.291C32.8613 9.06055 33.8809 10.0684 33.8809 11.6035V28.3965C33.8809 29.9316 32.8613 30.9395 31.291 30.9395H8.69727ZM8.68555 13.5605H10.0918C10.4082 13.5605 10.6309 13.3262 10.6309 13.0215V11.7676C10.6309 11.4395 10.4082 11.2168 10.0918 11.2168H8.7207C8.35742 11.2168 8.12305 11.4512 8.12305 11.8027V13.0215C8.12305 13.3262 8.3457 13.5605 8.68555 13.5605ZM29.8848 13.5605H31.291C31.6191 13.5605 31.8535 13.3262 31.8535 13.0215V11.8027C31.8535 11.4512 31.6191 11.2168 31.2559 11.2168H29.8848C29.5684 11.2168 29.334 11.4395 29.334 11.7676V13.0215C29.334 13.3262 29.5684 13.5605 29.8848 13.5605ZM8.68555 17.3926H10.0918C10.4082 17.3926 10.6309 17.1465 10.6309 16.8652V15.623C10.6309 15.2949 10.4082 15.0605 10.0918 15.0605H8.68555C8.3457 15.0605 8.12305 15.2949 8.12305 15.623V16.8652C8.12305 17.1465 8.3457 17.3926 8.68555 17.3926ZM29.8848 17.3926H31.291C31.6191 17.3926 31.8535 17.1465 31.8535 16.8652V15.623C31.8535 15.2949 31.6309 15.0605 31.291 15.0605H29.8848C29.5684 15.0605 29.334 15.2949 29.334 15.623V16.8652C29.334 17.1465 29.5684 17.3926 29.8848 17.3926ZM8.68555 21.1543H10.0918C10.4082 21.1543 10.6309 20.9199 10.6309 20.627V19.3965C10.6309 19.0566 10.4082 18.834 10.0918 18.834H8.68555C8.3457 18.834 8.12305 19.0566 8.12305 19.3965V20.627C8.12305 20.9199 8.3457 21.1543 8.68555 21.1543ZM29.8848 21.1543H31.291C31.6191 21.1543 31.8535 20.9199 31.8535 20.627V19.3965C31.8535 19.0566 31.6309 18.834 31.291 18.834H29.8848C29.5684 18.834 29.334 19.0566 29.334 19.3965V20.627C29.334 20.9199 29.5684 21.1543 29.8848 21.1543ZM11.9902 19.9941C11.9902 20.5449 12.4238 20.9902 12.9746 20.9902H27.0137C27.5645 20.9902 28.0098 20.5449 28.0098 19.9941C28.0098 19.4551 27.5645 19.0098 27.0137 19.0098H12.9746C12.4238 19.0098 11.9902 19.4551 11.9902 19.9941ZM8.68555 24.9512H10.0918C10.4082 24.9512 10.6309 24.7051 10.6309 24.4004V23.1816C10.6309 22.8418 10.4082 22.6191 10.0918 22.6191H8.68555C8.3457 22.6191 8.12305 22.8418 8.12305 23.1816V24.4004C8.12305 24.7051 8.3457 24.9512 8.68555 24.9512ZM29.8848 24.9512H31.291C31.6191 24.9512 31.8535 24.7051 31.8535 24.4004V23.1816C31.8535 22.8418 31.6309 22.6191 31.291 22.6191H29.8848C29.5684 22.6191 29.334 22.8418 29.334 23.1816V24.4004C29.334 24.7051 29.5684 24.9512 29.8848 24.9512ZM8.7207 28.7832H10.0918C10.4082 28.7832 10.6309 28.5488 10.6309 28.2324V26.9902C10.6309 26.6621 10.4082 26.4395 10.0918 26.4395H8.68555C8.3457 26.4395 8.12305 26.6621 8.12305 26.9902V28.1973C8.12305 28.5488 8.35742 28.7832 8.7207 28.7832ZM29.8848 28.7832H31.2559C31.6191 28.7832 31.8535 28.5488 31.8535 28.1973V26.9902C31.8535 26.6621 31.6191 26.4395 31.291 26.4395H29.8848C29.5684 26.4395 29.334 26.6621 29.334 26.9902V28.2324C29.334 28.5488 29.5684 28.7832 29.8848 28.7832Z" fill="var(--fill-0, #FFBBC6)"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="acting-coach-category-label">Movies</span>
+                                </button>
+                                <button type="button" class="acting-coach-category" data-category="books" aria-pressed="false">
+                                    <span class="acting-coach-category-icon" aria-hidden="true">
+                                        <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Frame 61">
+                                                <path id="books-icon" d="M13.7246 32.6797C11.252 32.6797 9.95117 31.3789 9.95117 28.8828V11.1641C9.95117 8.63281 11.252 7.32031 13.7598 7.32031H26.2402C28.748 7.32031 30.0488 8.64453 30.0488 11.1641V24.1836C30.0488 25.3672 29.5801 25.9414 29.0059 26.4688C27.5293 27.8633 27.8223 29.8555 29.2637 30.4883C29.6973 30.6875 30.0488 31.0742 30.0488 31.5898C30.0488 32.2109 29.5801 32.6797 28.9707 32.6797H13.7246ZM13.5723 25.0039C13.959 25.0039 14.2871 24.6875 14.2871 24.3008V9.99219C14.2871 9.59375 13.959 9.27734 13.5723 9.27734C13.1855 9.27734 12.8574 9.59375 12.8574 9.99219V24.3008C12.8574 24.6875 13.1855 25.0039 13.5723 25.0039ZM14.0176 30.5H26.3223C25.7012 29.4336 25.6309 28.0977 26.2051 26.8672C26.0879 26.8789 25.9707 26.8906 25.8418 26.8906H14.1113C12.8809 26.8906 12.1309 27.6406 12.1309 28.6836C12.1309 29.7969 12.7754 30.5 14.0176 30.5Z" fill="var(--fill-0, white)" fill-opacity="0.9"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="acting-coach-category-label">Books</span>
+                                </button>
+                                <button type="button" class="acting-coach-category" data-category="games" aria-pressed="false">
+                                    <span class="acting-coach-category-icon" aria-hidden="true">
+                                        <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Frame 62">
+                                                <path id="games-icon" d="M7.43164 30.8047C4.71289 30.8047 2.84961 29.0117 2.84961 26.1641C2.84961 24.9453 3.11914 23.5508 3.57617 22.0039C4.30273 19.5898 5.55664 16.3203 6.75195 13.7891C7.77148 11.668 8.32227 10.625 10.8887 10.0508C13.1387 9.53516 16.2324 9.19531 20.0059 9.19531C23.7676 9.19531 26.8613 9.53516 29.1113 10.0508C31.6777 10.625 32.2285 11.668 33.248 13.7891C34.4434 16.3203 35.6973 19.5898 36.4238 22.0039C36.8809 23.5508 37.1504 24.9453 37.1504 26.1641C37.1504 29.0117 35.2871 30.8047 32.5684 30.8047C30.834 30.8047 29.6621 30.1484 28.6074 28.9414L26.5215 26.4922C26.2285 26.1523 25.9238 25.9883 25.5605 25.9883H14.4395C14.0762 25.9883 13.7715 26.1523 13.4785 26.4922L11.3926 28.9414C10.3379 30.1484 9.16602 30.8047 7.43164 30.8047ZM10.0684 17.7148C10.0684 18.3945 10.4785 18.8164 11.1699 18.8164H13.2207V20.7969C13.2207 21.4883 13.6309 21.9219 14.2988 21.9219C14.9668 21.9219 15.377 21.4883 15.377 20.7969V18.8164H17.2988C18.0371 18.8164 18.4941 18.3945 18.4941 17.7148C18.4941 17.0469 18.0371 16.625 17.2988 16.625H15.377V14.6445C15.377 13.9648 14.9668 13.5312 14.2988 13.5312C13.6309 13.5312 13.2207 13.9648 13.2207 14.6445V16.625H11.1699C10.4785 16.625 10.0684 17.0469 10.0684 17.7148ZM27.623 17.6211C28.6309 17.6211 29.4395 16.8242 29.4395 15.8047C29.4395 14.7852 28.6309 13.9766 27.623 13.9766C26.6152 13.9766 25.7949 14.7852 25.7949 15.8047C25.7949 16.8242 26.6152 17.6211 27.623 17.6211ZM24.002 21.2891C25.0098 21.2891 25.8301 20.4688 25.8301 19.4609C25.8301 18.4531 25.0098 17.6328 24.002 17.6328C22.9941 17.6328 22.1738 18.4531 22.1738 19.4609C22.1738 20.4688 22.9941 21.2891 24.002 21.2891Z" fill="var(--fill-0, white)" fill-opacity="0.9"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="acting-coach-category-label">Games</span>
+                                </button>
+                                <button type="button" class="acting-coach-category" data-category="your-own" aria-pressed="false">
+                                    <span class="acting-coach-category-icon" aria-hidden="true">
+                                        <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="Frame 63">
+                                                <path id="your-own-icon" d="M15.4824 30.9219C13.4316 30.9219 11.8145 30.3242 10.748 29.2578C9.64648 28.168 9.07227 26.5625 9.07227 24.5117V15.4883C9.07227 13.4375 9.6582 11.832 10.748 10.7422C11.8145 9.67578 13.4316 9.07812 15.4824 9.07812H24.5059C26.5684 9.07812 28.1738 9.66406 29.252 10.7422C30.3418 11.832 30.9277 13.4375 30.9277 15.4883V24.5117C30.9277 26.5625 30.3418 28.1797 29.252 29.2578C28.1855 30.3242 26.5684 30.9219 24.5059 30.9219H15.4824ZM19.9707 25.6133C20.6504 25.6133 21.1309 25.1328 21.1309 24.4648V21.1367H24.4707C25.1387 21.1367 25.6191 20.6562 25.6191 20C25.6191 19.3203 25.1387 18.8398 24.4707 18.8398H21.1309V15.5117C21.1309 14.832 20.6504 14.3516 19.9707 14.3516C19.3027 14.3516 18.834 14.832 18.834 15.5117V18.8398H15.5059C14.8379 18.8398 14.3457 19.3203 14.3457 20C14.3457 20.6562 14.8379 21.1367 15.5059 21.1367H18.834V24.4648C18.834 25.1328 19.3027 25.6133 19.9707 25.6133Z" fill="var(--fill-0, white)" fill-opacity="0.9"/>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <span class="acting-coach-category-label">Your own</span>
+                                </button>
+                            </div>
+                            <p class="acting-coach-categories-hint">Tap on the categories to change</p>
+                        </div>
                     </div>
-                    <div class="app-info">
-                        <h1 class="app-title">Acting Coach</h1>
-                        <p class="app-tagline">Explore your range. Sharpen your delivery.</p>
-                        <span class="app-chip released">released</span>
-                    </div>
-                    <a href="https://apps.apple.com/us/app/acting-coach/id6756844103" target="_blank" class="beta-button appstore-link">
-                        <img src="../img/available-on-appstore.png" alt="View on the App Store" class="store-badge">
+                </div>
+            </section>
+
+            <section class="acting-coach-story" aria-labelledby="acting-coach-story-heading">
+                <div class="acting-coach-story-inner">
+                    <h2 id="acting-coach-story-heading" class="acting-coach-story-title">
+                        Don’t just read the lines.<br>
+                        Own the moment.
+                    </h2>
+                    <img class="acting-coach-logo" src="../img/acting-coach-logo.png" alt="Acting Coach logo">
+                    <p class="acting-coach-story-body">
+                        The biggest mistake an actor can make is getting "stuck" in a delivery.<br>
+                        Acting Coach is the digital gym for your emotional range, designed to break your habits<br>
+                        and prepare you for the unpredictability of a live director.
+                    </p>
+
+                    <a
+                        href="https://apps.apple.com/us/app/acting-coach/id6756844103"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="acting-coach-primary-btn"
+                    >
+                        <span class="acting-coach-btn-icon" aria-hidden="true">
+                            <img src="../img/acting-coach-apple-badge.svg" alt="" loading="lazy">
+                        </span>
+                        Download Acting Coach
                     </a>
                 </div>
-            </div>
-
-            <div class="app-description">
-                <p>Practice acting with random phrases and emotions from movies, books, and games.</p>
-                <p>Tap to explore new deliveries, stretch your range, and spark creativity.</p>
-            </div>
-
-            <div class="mockups-section">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/acting-coach-screen-1.png" alt="Acting Coach session list" class="screen-image">
-                    </div>
-                </div>
-
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/acting-coach-screen-2.png" alt="Acting Coach practice flow" class="screen-image">
-                    </div>
-                </div>
-
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/acting-coach-screen-3.png" alt="Acting Coach notes and takes" class="screen-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="why-section">
-                <h3>About the app</h3>
-                <p>Acting Coach is a practice tool for actors to explore emotions and delivery through famous phrases from movies, books, and video games.</p>
-                <p>Tap on any phrase or emotion to get a new random selection. Use these combinations to practice your acting skills, experiment with different emotional deliveries, and discover new ways to express yourself.</p>
-            </div>
-
-            <!-- <div class="why-section">
-                <h3>How sessions work</h3>
-                <p>Pick a focus, set your timebox, and run loops until it feels lived in. Capture takes, jot what you adjusted, and keep the best version pinned for the real audition.</p>
-                <ul class="feature-list">
-                    <li><strong>Session templates:</strong> audition prep, scene study, and self-tape sprints.</li>
-                    <li><strong>Notes that travel:</strong> beats, tactics, and adjustments stay attached to the scene.</li>
-                    <li><strong>Progress cues:</strong> see the drills you have not touched recently to stay balanced.</li>
-                </ul>
-            </div>
-
-            <div class="why-section">
-                <h3>Who it's for</h3>
-                <p>Actors who want a structured daily practice, coaches who want a repeatable framework for students, and creators who self-tape often and need a faster setup-to-record flow.</p>
-                <p>If that sounds like you, reach out and help shape the first release.</p>
-                <a href="https://www.linkedin.com/in/chip-rian/" target="_blank" class="beta-button">chat about early access</a>
-            </div> -->
+            </section>
         </div>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var pill = document.getElementById('acting-coach-category-pill');
+            if (!pill) return;
+
+            var buttons = Array.prototype.slice.call(pill.querySelectorAll('button[data-category]'));
+            if (!buttons.length) return;
+
+            var setActive = function (activeBtn) {
+                var category = activeBtn && activeBtn.getAttribute('data-category');
+                if (!category) return;
+
+                pill.classList.remove('is-movies', 'is-books', 'is-games', 'is-your-own');
+                pill.classList.add('is-' + category);
+
+                buttons.forEach(function (btn) {
+                    var isActive = btn === activeBtn;
+                    btn.classList.toggle('acting-coach-category-active', isActive);
+                    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
+
+                var preview = document.getElementById('acting-coach-phone-preview');
+                if (preview) {
+                    // Figma mapping for the phone preview:
+                    // - Movies -> screen-2
+                    // - Games -> screen-3
+                    // - Books / Your own keep the initial preview unless you specify otherwise.
+                    var screenSrcByCategory = {
+                        'movies': '../img/acting-coach-screen-1-1.png',
+                        'books': '../img/acting-coach-screen-2-1.png',
+                        'games': '../img/acting-coach-screen-3-1.png',
+                        'your-own': '../img/acting-coach-screen-4-1.png'
+                    };
+                    preview.setAttribute(
+                        'src',
+                        screenSrcByCategory[category] || screenSrcByCategory['movies']
+                    );
+                }
+            };
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    setActive(btn);
+                });
+            });
+
+            // Ensure the initial preview matches the default active tab.
+            var defaultActiveBtn = pill.querySelector('button[data-category].acting-coach-category-active');
+            if (defaultActiveBtn) setActive(defaultActiveBtn);
+        });
+    </script>
 </body>
 </html>
