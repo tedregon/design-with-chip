@@ -2432,9 +2432,9 @@ body.acting-coach-page {
 
 .acting-coach-story-body {
     font-family: var(--font-family);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: var(--font-weight-normal);
-    line-height: 32px;
+    line-height: 24px;
     letter-spacing: -0.1px;
     color: #061b31;
     margin: 0;
