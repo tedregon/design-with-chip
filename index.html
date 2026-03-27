@@ -254,7 +254,7 @@
         var carousel = track && track.closest('.testimonials-section');
         if (!track || !carousel) return;
 
-        fetch('coaching/testimonials.json')
+        fetch('testimonials.json')
           .then(function (response) {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();

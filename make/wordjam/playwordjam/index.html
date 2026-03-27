@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="playwordjam-site">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://*.firebaseapp.com https://*.firebasestorage.app https://www.google-analytics.com; font-src 'self' data:; worker-src 'self'; manifest-src 'self'; frame-ancestors 'none'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://*.firebaseapp.com https://*.firebasestorage.app https://www.google-analytics.com; font-src 'self' data:; worker-src 'self'; manifest-src 'self'; base-uri 'self';">
     <meta name="description" content="Play WordJam online - a daily word puzzle game. Drag rows to choose letters, form words, and complete the puzzle. Challenge your vocabulary and word-finding skills.">
     <meta name="keywords" content="WordJam, word puzzle game, word game online, word sliding crossword, daily word puzzle, vocabulary game, word search game, play wordjam">
     <meta name="author" content="Chip Rian">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://chipdoes.app/playwordjam/">
+    <link rel="canonical" href="https://chipdoes.app/make/wordjam/playwordjam/">
     <meta name="theme-color" content="#F5C139">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="WordJam">
     <title>WordJam Online | Chip Rian</title>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chipdoes.app/playwordjam/">
+    <meta property="og:url" content="https://chipdoes.app/make/wordjam/playwordjam/">
     <meta property="og:title" content="WordJam Online - Play Daily Word Puzzle Game">
     <meta property="og:description" content="Play WordJam online - a daily word puzzle game. Drag rows to choose letters, form words, and complete the puzzle. Challenge your vocabulary and word-finding skills.">
-    <meta property="og:image" content="https://chipdoes.app/playwordjam/img/home-page-logo.png">
+    <meta property="og:image" content="https://chipdoes.app/make/wordjam/playwordjam/img/home-page-logo.png">
     <meta property="og:site_name" content="Chip Does App">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://chipdoes.app/playwordjam/">
+    <meta name="twitter:url" content="https://chipdoes.app/make/wordjam/playwordjam/">
     <meta name="twitter:title" content="WordJam Online - Play Daily Word Puzzle Game">
     <meta name="twitter:description" content="Play WordJam online - a daily word puzzle game. Drag rows to choose letters, form words, and complete the puzzle. Challenge your vocabulary and word-finding skills.">
-    <meta name="twitter:image" content="https://chipdoes.app/playwordjam/img/home-page-logo.png">
+    <meta name="twitter:image" content="https://chipdoes.app/make/wordjam/playwordjam/img/home-page-logo.png">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/wordjam-logo.png">
+    <link rel="stylesheet" href="../../../styles.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="../../../js/nav.js" defer></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6DG4FZD75"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-Y6DG4FZD75');
-    </script>
+    <script src="gtag-config.js"></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -59,13 +56,14 @@
         "@type": "Person",
         "name": "Chip Rian"
       },
-      "url": "https://chipdoes.app/playwordjam/"
+      "url": "https://chipdoes.app/make/wordjam/playwordjam/"
     }
     </script>
     <script src="sw-register.js"></script>
     <script src="index.js"></script>
 </head>
-<body>
+<body class="playwordjam-site">
+    <div id="nav-placeholder"></div>
     <div class="container">
         <div class="landing-content">
             <div class="logo-container">

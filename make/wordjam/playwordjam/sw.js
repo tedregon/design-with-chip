@@ -1,10 +1,11 @@
 // Service Worker for WordJam PWA
-const CACHE_NAME = 'wordjam-v4';
+const CACHE_NAME = 'wordjam-v5';
 const urlsToCache = [
   './',
   './index.html',
   './completion.html',
   './game.html',
+  './gtag-config.js',
   './styles.css',
   './game.js',
   './dictionary.js',
@@ -58,6 +59,15 @@ self.addEventListener('message', (event) => {
   }
 });
 
+function canPutInCache(request) {
+  try {
+    const u = new URL(request.url);
+    return u.protocol === 'http:' || u.protocol === 'https:';
+  } catch (e) {
+    return false;
+  }
+}
+
 // Fetch event - network first for HTML, CSS and images, cache first for others
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
@@ -71,11 +81,12 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          // Update cache with fresh response
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
+          if (canPutInCache(event.request) && response && response.ok) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              return cache.put(event.request, responseClone);
+            }).catch(() => {});
+          }
           return response;
         })
         .catch(() => {
