@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://chipdoes.app/vigor">
     <meta property="og:title" content="Vigor - Track Daily Steps & Stay Active">
     <meta property="og:description" content="Vigor helps you track your daily steps and stay motivated to reach your fitness goals. Monitor your activity levels with an intuitive interface and helpful reminders.">
-    <meta property="og:image" content="https://chipdoes.app/img/steps-counter-logo.png">
+    <meta property="og:image" content="https://chipdoes.app/img/vigor-phone-hero.png">
     <meta property="og:site_name" content="Chip Does App">
     
     <!-- Twitter -->
@@ -23,7 +23,7 @@
     <meta name="twitter:url" content="https://chipdoes.app/vigor">
     <meta name="twitter:title" content="Vigor - Track Daily Steps & Stay Active">
     <meta name="twitter:description" content="Vigor helps you track your daily steps and stay motivated to reach your fitness goals. Monitor your activity levels with an intuitive interface and helpful reminders.">
-    <meta name="twitter:image" content="https://chipdoes.app/img/steps-counter-logo.png">
+    <meta name="twitter:image" content="https://chipdoes.app/img/vigor-phone-hero.png">
     
     <link rel="icon" type="image/png" href="../img/favicon.png">
     <link rel="stylesheet" href="../styles.css">
@@ -55,67 +55,122 @@
         "name": "Chip Rian"
       },
       "screenshot": [
-        "https://chipdoes.app/img/steps-counter-screen-1.png",
-        "https://chipdoes.app/img/steps-counter-screen-2.png",
-        "https://chipdoes.app/img/steps-counter-screen-3.png"
+        "https://chipdoes.app/img/vigor-phone-hero.png",
+        "https://chipdoes.app/img/vigor-watch-card.png"
       ]
     }
     </script>
 </head>
-<body>
+<body class="vigor-page">
     <div id="nav-placeholder"></div>
-    
-    <main>
-        <div class="content-container">
-            <!-- App Introduction Section -->
-            <div class="app-intro">
-                <div class="app-header">
-                    <div class="app-icon">
-                        <img src="../img/steps-counter-logo.png" alt="Vigor">
-                    </div>
-                    <div class="app-info">
-                        <h1 class="app-title">Vigor</h1>
-                        <p class="app-tagline">Take charge of your health</p>
-                        <span class="app-chip released">released</span>
-                    </div>
-                    <a href="https://apps.apple.com/gb/app/vigor-steps-counter/id6744516514" target="_blank" class="beta-button appstore-link">
-                        <img src="../img/available-on-appstore.png" alt="View on the App Store" class="store-badge">
+    <main class="vigor-main">
+        <div class="vigor-landing">
+            <section class="vigor-hero">
+                <div class="vigor-hero-content">
+                    <h1>Stop calculating your fitness.<br>Start moving.</h1>
+                    <p>
+                        Vigor eliminates the manual math of fragmented health data.<br>
+                        One glance for your weekly averages, active calories,<br>
+                        and the Apple Watch complication Apple forgot to build.
+                    </p>
+                    <a
+                        href="https://apps.apple.com/gb/app/vigor-steps-counter/id6744516514"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="vigor-download-btn"
+                    >
+                        <img src="../img/vigor-apple-icon.svg" alt="" aria-hidden="true">
+                        Download Vigor
                     </a>
                 </div>
-            </div>
-
-            <!-- App Description -->
-            <div class="app-description">
-                <p>Track your daily steps and stay motivated to reach your fitness goals. Vigor helps you monitor your activity levels throughout the day with an intuitive interface and helpful reminders to keep you moving.</p>
-            </div>
-
-            <!-- iPhone Mockups -->
-            <div class="mockups-section">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/steps-counter-screen-1.png" alt="Vigor Home Screen" class="screen-image">
-                    </div>
+                <div class="vigor-hero-phone-wrap">
+                    <img src="../img/vigor-phone-hero.png" alt="Vigor iPhone app preview" class="vigor-hero-phone">
                 </div>
+            </section>
 
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/steps-counter-screen-2.png" alt="Vigor Stats Screen" class="screen-image">
+            <section class="vigor-features-grid">
+                <article class="vigor-card vigor-card-wide">
+                    <div class="vigor-card-icon-wrap">
+                        <img src="../img/vigor-icon-balance.svg" alt="" aria-hidden="true" class="vigor-card-icon">
                     </div>
-                </div>
-
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../img/steps-counter-screen-3.png" alt="Vigor Settings Screen" class="screen-image">
+                    <div class="vigor-card-copy">
+                        <h3>Balance The Week</h3>
+                        <p>
+                            A sedentary Tuesday shouldn't feel like a failure.<br>
+                            Vigor shifts the focus from daily to your 7-day rolling average.<br>
+                            Use the "buffer" of active days to stay on track during busy work weeks.
+                        </p>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Why I'm building this app section -->
-            <div class="why-section">
-                <h2>Why I'm building this app?</h2>
-                <p>Health and fitness tracking has become increasingly important in our daily lives. I wanted to create a simple, focused app that helps people stay active without the complexity of larger fitness platforms.</p>
-                <p>Vigor is designed to be your daily companion for staying active, with clean design and essential features that make tracking your steps effortless and motivating.</p>
-            </div>
+                <article class="vigor-card">
+                    <div class="vigor-card-icon-wrap">
+                        <img src="../img/vigor-icon-noise.svg" alt="" aria-hidden="true" class="vigor-card-icon">
+                    </div>
+                    <div class="vigor-card-copy">
+                        <h3>The Calorie Noise</h3>
+                        <p>
+                            Most apps count every "fidget" as a calorie.
+                            Vigor focuses on the workouts you actually do.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="vigor-card">
+                    <div class="vigor-card-icon-wrap">
+                        <img src="../img/vigor-icon-math.svg" alt="" aria-hidden="true" class="vigor-card-icon">
+                    </div>
+                    <div class="vigor-card-copy">
+                        <h3>The "Fitness Math" Tax</h3>
+                        <p>
+                            Stop manually adding up HIIT sessions, walks, and runs.
+                            Vigor aggregates your data into a single, actionable weekly total.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="vigor-card">
+                    <div class="vigor-card-icon-wrap">
+                        <img src="../img/vigor-icon-widget.svg" alt="" aria-hidden="true" class="vigor-card-icon">
+                    </div>
+                    <div class="vigor-card-copy">
+                        <h3>The Missing Widgets</h3>
+                        <p>
+                            Apple tracks your steps, but hides them inside the Health app.<br>
+                            Vigor puts your progress on your Home Screen, and Apple Watch.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="vigor-watch-card">
+                    <img src="../img/vigor-watch-card.png" alt="Vigor Apple Watch preview">
+                </article>
+            </section>
+
+            <section class="vigor-story">
+                <h2>Built by a Designer, for the Driven</h2>
+                <p>
+                    "I built Vigor because I was tired of being a data analyst just to stay fit.
+                    I wanted to reach a 10k average and 1k active calories per week,
+                    but I found myself manually adding up metrics across three different screens every night.
+                </p>
+                <p>
+                    As a designer, I knew the interface was the problem.
+                    I built Vigor to take away the math and leave only the action.
+                    It's the tool I needed for my own journey, and now it's yours."
+                </p>
+            </section>
+
+            <section class="vigor-bottom-cards">
+                <article class="vigor-bottom-card">
+                    <h3>Privacy First</h3>
+                    <p>No accounts, no tracking, no cloud.<br>Your data stays on your device.</p>
+                </article>
+                <article class="vigor-bottom-card">
+                    <h3>Native Integration</h3>
+                    <p>Powered by Apple HealthKit.<br>For 100% accuracy.</p>
+                </article>
+            </section>
         </div>
     </main>
 </body>

@@ -2719,3 +2719,273 @@ body.acting-coach-page {
     line-height: 20px;
     letter-spacing: -0.07px;
 }
+
+/* Vigor page – Figma node 161:1094 */
+body.vigor-page {
+    background: #ffffff;
+    margin-bottom: 0;
+}
+
+.vigor-main {
+    width: 100%;
+}
+
+.vigor-landing {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 24px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.vigor-hero {
+    width: 100%;
+    border: 0.5px solid #b8cadb;
+    border-radius: 32px;
+    padding: 48px 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    /* Match Figma node 161:1098 radial falloff (centered low-mid). */
+    background: radial-gradient(35% 53% at 50.5% 78.5%, #168203 0%, #126304 25%, #0e4504 50%, #092605 75%, #071705 87.5%, #050805 100%);
+}
+
+.vigor-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.vigor-hero-content h1 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: -0.12px;
+    margin: 0;
+}
+
+.vigor-hero-content p {
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: var(--font-weight-normal);
+    letter-spacing: -0.09px;
+    margin: 0;
+}
+
+.vigor-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    border: 0.5px solid #53f01a;
+    background: #050805;
+    color: #53f01a;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.45;
+    letter-spacing: -0.09px;
+    transition: opacity 0.2s ease;
+}
+
+.vigor-download-btn:hover {
+    opacity: 0.92;
+}
+
+.vigor-download-btn img {
+    width: 16px;
+    height: 26px;
+    display: block;
+}
+
+.vigor-hero-phone-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.vigor-hero-phone {
+    width: 300px;
+    height: 358px;
+    object-fit: cover;
+    display: block;
+}
+
+.vigor-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 272px 406px;
+    gap: 24px;
+}
+
+.vigor-card,
+.vigor-watch-card {
+    background: #f5f7fb;
+    border: 0.5px solid #b8cadb;
+    border-radius: 32px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.vigor-card {
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.vigor-card-copy {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vigor-card-wide {
+    grid-column: span 2;
+}
+
+.vigor-card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 64px;
+    background: #1c4c03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vigor-card-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.vigor-card h3 {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.4px;
+    color: #061b31;
+}
+
+.vigor-card p {
+    margin: 0;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--font-weight-medium);
+    color: #061b31;
+}
+
+.vigor-watch-card {
+    /* Figma node 163:16235 radialGradient matrix(0 -18.842 25.791 0 154.67 224.9) on 309.33x406 card. */
+    background: radial-gradient(83.4% 46.4% at 50% 55.4%, #168203 0%, #126304 25%, #0e4504 50%, #092605 75%, #071705 87.5%, #050805 100%);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.vigor-watch-card img {
+    width: 215px;
+    height: 358px;
+    object-fit: cover;
+    display: block;
+}
+
+.vigor-story {
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vigor-story h2 {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.16px;
+    color: #061b31;
+}
+
+.vigor-story p {
+    margin: 0;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--font-weight-medium);
+    color: #061b31;
+}
+
+.vigor-bottom-cards {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.vigor-bottom-card {
+    flex: 1;
+    background: #f5f7fb;
+    border: 0.5px solid #b8cadb;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vigor-bottom-card h3 {
+    margin: 0;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--font-weight-bold);
+    color: #000000;
+}
+
+.vigor-bottom-card p {
+    margin: 0;
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--font-weight-medium);
+    color: #000000;
+}
+
+@media (max-width: 900px) {
+    .vigor-hero {
+        padding: 36px 24px 0;
+    }
+
+    .vigor-features-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .vigor-card,
+    .vigor-watch-card {
+        min-height: 272px;
+    }
+
+    .vigor-card-wide {
+        grid-column: auto;
+    }
+
+    .vigor-bottom-cards {
+        flex-direction: column;
+    }
+}
