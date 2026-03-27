@@ -13,7 +13,7 @@ The navbar is injected on pages that include `<div id="nav-placeholder"></div>` 
 | **Hire** | No (hidden) | `/hire/` | Page exists, hidden until launch |
 | **Make** | Yes | `/make/` | Active for routes starting with `/make/` |
 | **Talk** | No (hidden) | `/talk/` | Page exists, hidden until launch |
-| **About** | No (hidden) | `/about/` | Page exists, hidden until launch |
+| **About** | Yes | `/about/` | Active on `/about/` |
 | **Contact** | Yes | [LinkedIn profile](https://www.linkedin.com/in/chip-rian/) | Opens in new tab |
 | **Book a coaching call** | Yes (CTA) | Google Calendar booking link | Same URL as home “Book your session” flow |
 

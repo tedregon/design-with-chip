@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..700&display=swap');
 
 :root {
+    /* Figma — ChipDoes.App website (home 134:734) */
+    --color-page: #f5f7fb;
+    --color-surface-off-white: #fcfcfc;
+    --color-surface-white: #ffffff;
+    --color-text-figma: #061b31;
+    --color-text-secondary-figma: #64748d;
+
     /* Background Colors */
-    --bg-primary: #FFFFFF;
+    --bg-primary: #ffffff;
     --bg-secondary: #f5f5f5;
     --bg-tertiary: #f8f8f8;
     --bg-card: #f5f5f5;
@@ -14,7 +21,7 @@
     --bg-bottom-nav: #f8f8f8;
     
     /* Text Colors */
-    --text-primary: #061222;
+    --text-primary: #061b31;
     --text-secondary: #666666;
     --text-on-dark: #FFFFFF;
     --text-on-light: #000000;
@@ -84,7 +91,12 @@ body {
     font-family: var(--font-family);
     line-height: var(--line-height-body);
     margin-bottom: 80px;
-    background: #f5f7fa;
+    background: var(--color-page);
+}
+
+/* index.html — Figma White/Off-White (#fcfcfc) */
+body.page-home {
+    background: var(--color-surface-off-white);
 }
 
 .hidden {
@@ -1091,17 +1103,18 @@ main {
     line-height: var(--line-height-relaxed);
 }
 
-/* Home hero – Figma node 127:743 (Hero 1) */
+/* Home – Figma node 134:734 (home) */
+/* Home hero – Figma node 134:744 (Hero 1) */
 .coaching-hero {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    padding: 80px 48px;
-    background-color: var(--bg-primary);
+    padding: 48px;
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     overflow: hidden;
+    background: radial-gradient(100% 100% at 100% 100%, #4444D2 0%, #3444C5 34.13%, #30329F 71%, #21227D 100%), radial-gradient(203.33% 100% at 100% 46.25%, #393BB4 0%, #191A4E 100%);
 }
 
 .coaching-hero-content {
@@ -1118,17 +1131,17 @@ main {
     font-size: 16px;
     font-weight: var(--font-weight-medium);
     line-height: 24px;
-    color: var(--text-primary);
+    color: #ffffff;
     margin: 0;
 }
 
 .coaching-title {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
-    color: var(--text-primary);
+    line-height: 36px;
+    letter-spacing: -0.12px;
+    color: #ffffff;
     margin: 0;
 }
 
@@ -1157,18 +1170,28 @@ main {
 }
 
 .coaching-hero-btn:hover {
-    opacity: 0.9;
+    opacity: 0.92;
 }
 
 .coaching-hero-btn-primary {
-    background-color: var(--hero-primary);
-    color: var(--text-on-dark);
+    background-color: #ffffff;
+    color: var(--hero-primary);
+}
+
+.coaching-hero-btn-primary:hover {
+    background-color: #f2f3ff;
+    opacity: 1;
 }
 
 .coaching-hero-btn-secondary {
     background-color: transparent;
-    color: var(--hero-primary);
-    border: 1px solid var(--hero-primary);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.coaching-hero-btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    opacity: 1;
 }
 
 .coaching-hero-subtext {
@@ -1184,14 +1207,17 @@ main {
     flex-shrink: 0;
     width: 320px;
     height: 320px;
-    border-radius: 24px;
+    border-radius: 32px;
     overflow: hidden;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
 }
 
 .coaching-hero-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .coaching-hero-cta {
@@ -1261,9 +1287,9 @@ main {
     margin-bottom: 0;
 }
 
-/* The problem section – Figma node 127:755 */
+/* The problem — Figma 134:756 (White/Light grey) */
 .problem-section {
-    background-color: var(--bg-primary);
+    background-color: var(--color-page);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
@@ -1279,10 +1305,10 @@ main {
 
 .problem-heading {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
+    line-height: 36px;
+    letter-spacing: -0.12px;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1337,15 +1363,126 @@ main {
     margin-top: 24px;
 }
 
-/* Why you're not getting calls – Figma node 127:793 */
+/* About page (about/index.html) */
+.about-article .about-article-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-article-title {
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-weight: var(--font-weight-medium);
+    line-height: 40px;
+    letter-spacing: -0.16px;
+    color: var(--text-primary);
+    margin: 0 0 20px 0;
+}
+
+.about-lead {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.about-block {
+    margin-top: 40px;
+}
+
+.about-block h2 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: var(--font-weight-medium);
+    line-height: 36px;
+    letter-spacing: -0.12px;
+    color: var(--text-primary);
+    margin: 0 0 16px 0;
+}
+
+.about-block p,
+.about-block li {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+}
+
+.about-block p:last-child {
+    margin-bottom: 0;
+}
+
+.about-block ul {
+    margin: 12px 0 0 0;
+    padding-left: 24px;
+    list-style: disc;
+}
+
+.about-block li {
+    margin-bottom: 8px;
+}
+
+.about-block li:last-child {
+    margin-bottom: 0;
+}
+
+.about-block strong {
+    font-weight: var(--font-weight-semibold);
+}
+
+.about-hobbies {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-hobby h3 {
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    line-height: 28px;
+    letter-spacing: -0.09px;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.about-hobby p {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.about-outro {
+    margin-top: 32px;
+}
+
+.about-outro a {
+    color: var(--hero-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.about-outro a:hover {
+    opacity: 0.88;
+}
+
+/* Why you're not getting calls — Figma 134:794 */
 .calls-section {
-    background-color: var(--bg-primary);
+    background-color: var(--color-page);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 32px;
     overflow: hidden;
 }
 
@@ -1357,10 +1494,10 @@ main {
 
 .calls-heading {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
+    line-height: 36px;
+    letter-spacing: -0.12px;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1383,7 +1520,7 @@ main {
 .calls-card {
     flex: 1 1 0;
     min-width: 0;
-    background-color: #eff2f5;
+    background-color: var(--color-surface-white);
     border: 0.5px solid var(--hero-border);
     border-radius: 16px;
     padding: 24px;
@@ -1392,12 +1529,31 @@ main {
     gap: 24px;
 }
 
+.calls-card-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--hero-primary);
+    border: none;
+}
+
+.calls-card-icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    flex-shrink: 0;
+}
+
 .calls-card-title {
     font-family: var(--font-family);
     font-size: 20px;
     font-weight: var(--font-weight-medium);
     line-height: 32px;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.3px;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1437,9 +1593,9 @@ main {
     margin-bottom: 0;
 }
 
-/* What we do to fix it – Figma node 127:824 */
+/* What we do to fix it — Figma 134:825 (White/White) */
 .fix-it-section {
-    background-color: var(--bg-primary);
+    background-color: var(--color-surface-white);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
@@ -1454,10 +1610,10 @@ main {
 
 .fix-it-heading {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
+    line-height: 36px;
+    letter-spacing: -0.12px;
     color: var(--text-primary);
     margin: 0 0 8px 0;
 }
@@ -1497,7 +1653,7 @@ main {
     align-items: center;
     gap: 8px;
     padding: 12px 20px;
-    background-color: #eff2f5;
+    background-color: var(--color-page);
     border-radius: 12px;
 }
 
@@ -1523,9 +1679,9 @@ main {
     margin: 0;
 }
 
-/* What changes after working together – Figma node 127:1837 */
+/* What changes after working together — Figma 134:1838 (White/White) */
 .changes-section {
-    background-color: var(--bg-primary);
+    background-color: var(--color-surface-white);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
@@ -1540,10 +1696,10 @@ main {
 
 .changes-heading {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
+    line-height: 36px;
+    letter-spacing: -0.12px;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1620,9 +1776,9 @@ main {
     margin: 0;
 }
 
-/* Book your first session – Figma node 127:1849 */
+/* Book your first session — Figma 134:1850 (White/Light grey) */
 .book-cta-section {
-    background-color: #eff2f5;
+    background-color: var(--color-page);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
@@ -1719,9 +1875,9 @@ main {
     padding-bottom: 24px;
 }
 
-/* Testimonials section – Figma node 127:763 */
+/* Testimonials — Figma 134:764 (White/White) */
 .testimonials-section {
-    background-color: #eff2f5;
+    background-color: var(--color-surface-white);
     border: 0.5px solid var(--hero-border);
     border-radius: 32px;
     padding: 48px;
@@ -1741,10 +1897,10 @@ main {
 
 .testimonials-heading {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: var(--font-weight-medium);
-    line-height: 40px;
-    letter-spacing: -0.16px;
+    line-height: 36px;
+    letter-spacing: -0.12px;
     color: var(--text-primary);
     margin: 0;
 }
@@ -1760,8 +1916,8 @@ main {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #d9d9d9;
-    background-color: var(--bg-primary);
+    border: 1px solid var(--hero-border);
+    background-color: var(--color-page);
     color: var(--text-primary);
     cursor: pointer;
     display: flex;
@@ -1771,7 +1927,7 @@ main {
 }
 
 .testimonials-nav-btn:hover {
-    background-color: var(--bg-card);
+    background-color: var(--color-surface-off-white);
     border-color: var(--hero-border);
 }
 
@@ -1800,9 +1956,9 @@ main {
     width: min(380px, 85vw);
     min-height: 200px;
     padding: 24px;
-    background-color: #ffffff;
+    background-color: var(--color-page);
     border: 0.5px solid var(--hero-border);
-    border-radius: 12px;
+    border-radius: 16px;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -1839,7 +1995,7 @@ main {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    color: #5b6c80;
+    color: var(--color-text-secondary-figma);
     margin: 4px 0 0 0;
 }
 
@@ -1939,7 +2095,7 @@ main {
         --bg-bottom-nav: #f8f8f8;
         
         /* Text Colors */
-        --text-primary: #061222;
+        --text-primary: #061b31;
         --text-secondary: #666666;
         --text-on-dark: #FFFFFF;
         --text-on-light: #000000;
@@ -2068,11 +2224,6 @@ main {
         flex-direction: column;
     }
 
-    .calls-heading {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
     .fix-it-section {
         padding: 48px 24px;
     }
@@ -2129,7 +2280,7 @@ main {
         margin-bottom: 16px;
     }
 
-    .coaching-hero, .problem-section, .calls-section, .fix-it-section, .changes-section, .book-cta-section, .testimonials-section {
+    .coaching-hero, .problem-section, .calls-section, .fix-it-section, .changes-section, .book-cta-section, .testimonials-section, .about-article {
         border-radius: 0px;
     }
 }

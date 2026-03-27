@@ -1,5 +1,5 @@
 // Navigation — Figma node 166:901
-// Train = home + portfolio reviewer. Make = make hub. Hire / Talk / About stay hidden until launch.
+// Train = home + portfolio reviewer. Make = make hub. Hire / Talk stay hidden until launch.
 
 (function () {
     'use strict';
@@ -81,11 +81,11 @@
             '" ' +
             linkAttrs('talk', active) +
             ' data-nav="talk" tabindex="-1">Talk</a></li>' +
-            '      <li class="navbar-nav-item--hidden" aria-hidden="true"><a href="' +
+            '      <li><a href="' +
             aboutLink +
             '" ' +
             linkAttrs('about', active) +
-            ' data-nav="about" tabindex="-1">About</a></li>' +
+            ' data-nav="about">About</a></li>' +
             '      <li><a href="https://www.linkedin.com/in/chip-rian/" target="_blank" rel="noopener noreferrer" class="navbar-link navbar-link--external">Contact <img src="' +
             imgPath +
             '" alt="" class="navbar-link-icon" width="20" height="20"></a></li>' +
