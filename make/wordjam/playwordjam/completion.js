@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to get share text
     function getShareText() {
-        return `I have completed today's WordJam puzzle in ${tries} ${tries === 1 ? 'try' : 'tries'} https://chipdoes.app/make/wordjam/playwordjam/`;
+        return `I have completed today's WordJam puzzle in ${tries} ${tries === 1 ? 'try' : 'tries'} https://designwithchip.com/make/wordjam/playwordjam/`;
     }
 
     // Share button - share to X/Twitter
     document.getElementById('share-btn').addEventListener('click', () => {
         const message = `I have completed today's WordJam puzzle in ${tries} ${tries === 1 ? 'try' : 'tries'}`;
-        const url = 'https://chipdoes.app/make/wordjam/playwordjam/';
+        const url = 'https://designwithchip.com/make/wordjam/playwordjam/';
         const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent(url)}`;
         window.open(twitterUrl, '_blank', 'width=550,height=420');
     });

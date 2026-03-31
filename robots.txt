@@ -3,5 +3,5 @@ Allow: /
 Disallow: /make/wordjam/playwordjam/game.html
 
 # Sitemap
-Sitemap: https://chipdoes.app/sitemap.xml
+Sitemap: https://designwithchip.com/sitemap.xml
 

@@ -5,77 +5,77 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <url>
-        <loc>https://chipdoes.app/</loc>
+        <loc>https://designwithchip.com/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://chipdoes.app/make/</loc>
+        <loc>https://designwithchip.com/make/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/make/drafts/</loc>
+        <loc>https://designwithchip.com/make/drafts/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/make/mobile/</loc>
+        <loc>https://designwithchip.com/make/mobile/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://chipdoes.app/make/vigor/</loc>
+        <loc>https://designwithchip.com/make/vigor/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/make/acting-coach/</loc>
+        <loc>https://designwithchip.com/make/acting-coach/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/make/wordjam/</loc>
+        <loc>https://designwithchip.com/make/wordjam/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/make/wordjam/playwordjam/</loc>
+        <loc>https://designwithchip.com/make/wordjam/playwordjam/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://chipdoes.app/portfolioreviewer/</loc>
+        <loc>https://designwithchip.com/portfolioreviewer/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/sudoku/</loc>
+        <loc>https://designwithchip.com/sudoku/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://chipdoes.app/privacy/</loc>
+        <loc>https://designwithchip.com/privacy/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
-        <loc>https://chipdoes.app/about/</loc>
+        <loc>https://designwithchip.com/about/</loc>
         <lastmod>2026-03-27</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
