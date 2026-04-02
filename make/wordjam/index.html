@@ -28,6 +28,7 @@
     <link rel="icon" type="image/png" href="../../img/favicon.png">
     <link rel="stylesheet" href="../../styles.css">
     <script src="../../js/nav.js" defer></script>
+    <script src="../../js/footer.js" defer></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6DG4FZD75"></script>
     <script>
@@ -62,61 +63,145 @@
     }
     </script>
 </head>
-<body>
+<body class="wordjam-page">
     <div id="nav-placeholder"></div>
-    
-    <main>
-        <div class="content-container">
-            <!-- App Introduction Section -->
-            <div class="app-intro">
-                <div class="app-header">
-                    <div class="app-icon">
-                        <img src="../../img/wordjam-logo.png" alt="WordJam">
+
+    <main class="wordjam-main">
+        <div class="wordjam-landing">
+            <section class="wordjam-hero" aria-labelledby="wordjam-hero-title">
+                <div class="wordjam-hero-copy">
+                    <h1 id="wordjam-hero-title">Slide. Spell. Survive the grid.</h1>
+
+                    <div class="wordjam-hero-subhead" aria-label="WordJam benefits">
+                        <p>WordJam turns your vocabulary into a physical puzzle.</p>
+                        <p>Shuffle each row until the column sings a real word.</p>
+                        <p>Right word, letters vanish and the board reshapes.</p>
+                        <p>Wrong word, you lose a heart. Simple rules. Devious depth.</p>
                     </div>
-                    <div class="app-info">
-                        <h1 class="app-title">WordJam</h1>
-                        <p class="app-tagline">Word game to keep your brain challenged</p>
-                        <span class="app-chip released">released</span>
-                    </div>
-                    <a href="https://apps.apple.com/us/app/word-jam-sliding-crossword/id1551279283" target="_blank" class="beta-button appstore-link">
-                        <img src="../../img/available-on-appstore.png" alt="View on the App Store" class="store-badge">
+
+                    <a
+                        href="https://apps.apple.com/us/app/word-jam-sliding-crossword/id1551279283"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="wordjam-download-btn"
+                    >
+                        <img
+                            class="wordjam-download-icon"
+                            src="../../img/wordjam/wordjam-download-arrow.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
+                        Download WordJam
                     </a>
                 </div>
-            </div>
 
-            <!-- App Description -->
-            <div class="app-description">
-                <p>Challenge your vocabulary and word-finding skills with WordJam, an engaging word puzzle game.<br /> Find words from a grid of letters, and keep your mind sharp with daily challenges and increasing difficulty levels.</p>
-            </div>
+                <div class="wordjam-hero-phone" aria-hidden="true">
+                    <img src="../../img/wordjam-screen-02.png" alt="" class="wordjam-phone-image" loading="lazy">
+                </div>
+            </section>
 
-            <!-- iPhone Mockups -->
-            <div class="mockups-section">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../../img/wordjam-screen-01.png" alt="WordJam Game Screen" class="screen-image">
+            <section class="wordjam-grid" aria-label="WordJam play modes">
+                <article class="wordjam-card wordjam-card--progression">
+                    <div class="wordjam-card-icon">
+                        <img
+                            src="../../img/wordjam/icon-steps.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
                     </div>
+                    <div class="wordjam-card-copy">
+                        <h3>Progression — the curated climb</h3>
+                        <p>
+                            The map opens up as you prove yourself: nail enough of a stage and the next level unlocks. It’s the mode for people who want a sense of momentum. Chapters to read, bars to fill, and that quiet satisfaction when a tough strip finally breaks your way. When the board turns cruel, spend coins on an extra life or new letters shuffled into the grid—then get back to sliding.
+                        </p>
+                    </div>
+                </article>
+
+                <div class="wordjam-sim wordjam-sim--top-right" aria-hidden="true">
+                    <img
+                        src="../../img/wordjam/sim-top-right.png"
+                        alt=""
+                        class="wordjam-sim-image"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../../img/wordjam-screen-02.png" alt="WordJam Score Screen" class="screen-image">
-                    </div>
+                <div class="wordjam-sim wordjam-sim--middle-left" aria-hidden="true">
+                    <img
+                        src="../../img/wordjam/sim-middle-left.png"
+                        alt=""
+                        class="wordjam-sim-image"
+                        loading="lazy"
+                    >
                 </div>
 
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <img src="../../img/wordjam-screen-03.png" alt="WordJam Leaderboard Screen" class="screen-image">
+                <article class="wordjam-card wordjam-card--endless">
+                    <div class="wordjam-card-icon">
+                        <img
+                            src="../../img/wordjam/icon-infinity.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
                     </div>
-                </div>
-            </div>
+                    <div class="wordjam-card-copy">
+                        <h3>Endless — how far can you go?</h3>
+                        <p>
+                            Endless is quickplay with no last page. Pick a flavor before you dive: ride Incremental mode as word length ramps stage by stage, or lock in a grid size from 3-letter skirmishes up to 10-letter epics. Same slide-and-spell heart, different appetite.
+                        </p>
+                    </div>
+                </article>
 
-            <!-- Why I'm building this app section -->
-            <div class="why-section">
-                <h2>Why I'm building this app?</h2>
-                <p>Word games have always been a great way to exercise the mind and improve vocabulary. I wanted to create a modern take on classic word puzzles that's both challenging and enjoyable.</p>
-                <p>WordJam combines the satisfaction of finding words with competitive elements and daily challenges, making it a perfect way to keep your brain active and engaged during short breaks throughout the day.</p>
-            </div>
+                <article class="wordjam-card wordjam-card--feel">
+                    <div class="wordjam-card-icon">
+                        <img
+                            src="../../img/wordjam/icon-grid-nine.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="wordjam-card-copy">
+                        <h3>Feel the grid</h3>
+                        <p>Drag rows, tap to center, watch the column light up. Built for one hand and a coffee break.</p>
+                    </div>
+                </article>
+
+                <article class="wordjam-card wordjam-card--own-risk">
+                    <div class="wordjam-card-icon">
+                        <img
+                            src="../../img/wordjam/icon-speedometer.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="wordjam-card-copy">
+                        <h3>Own the risk</h3>
+                        <p>Hearts mean every submit matters. Trust the dictionary—or rethink the strip.</p>
+                    </div>
+                </article>
+
+                <article class="wordjam-card wordjam-card--play-way">
+                    <div class="wordjam-card-icon">
+                        <img
+                            src="../../img/wordjam/icon-game-controller.svg"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="wordjam-card-copy">
+                        <h3>Play your way</h3>
+                        <p>Progression on the map, Endless on the leaderboard—same grid, different hunger.</p>
+                    </div>
+                </article>
+            </section>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 </body>
 </html>

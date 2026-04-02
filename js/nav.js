@@ -1,5 +1,5 @@
 // Navigation — Figma node 166:901
-// Train = home + portfolio reviewer. Make = make hub. Hire / Talk stay hidden until launch.
+// Train = home + portfolio reviewer. Make = make hub.
 
 (function () {
     'use strict';
@@ -66,22 +66,22 @@
             '" ' +
             linkAttrs('train', active) +
             ' data-nav="train">Train</a></li>' +
-            '      <li class="navbar-nav-item--hidden" aria-hidden="true"><a href="' +
-            hireLink +
-            '" ' +
-            linkAttrs('hire', active) +
-            ' data-nav="hire" tabindex="-1">Hire</a></li>' +
             '      <li><a href="' +
+            // hireLink +
+            // '" ' +
+            // linkAttrs('hire', active) +
+            // ' data-nav="hire">Hire</a></li>' +
+            // '      <li><a href="' +
             makeLink +
             '" ' +
             linkAttrs('make', active) +
             ' data-nav="make">Make</a></li>' +
-            '      <li class="navbar-nav-item--hidden" aria-hidden="true"><a href="' +
-            talkLink +
-            '" ' +
-            linkAttrs('talk', active) +
-            ' data-nav="talk" tabindex="-1">Talk</a></li>' +
             '      <li><a href="' +
+            // talkLink +
+            // '" ' +
+            // linkAttrs('talk', active) +
+            // ' data-nav="talk">Talk</a></li>' +
+            // '      <li><a href="' +
             aboutLink +
             '" ' +
             linkAttrs('about', active) +

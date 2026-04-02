@@ -90,7 +90,6 @@ body {
     color: var(--text-primary);
     font-family: var(--font-family);
     line-height: var(--line-height-body);
-    margin-bottom: 80px;
     background: var(--color-page);
 }
 
@@ -132,7 +131,7 @@ body.page-home {
     min-width: 0;
     font-size: 14px;
     line-height: 1.45;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-semibold);
     letter-spacing: -0.28px;
     color: #061b31;
     text-decoration: none;
@@ -2320,7 +2319,7 @@ body.portfolio-page .portfolio-main {
 /* Portfolio landing layout */
 .portfolio-hero {
     margin-top: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .portfolio-eyebrow {
@@ -2359,6 +2358,132 @@ body.portfolio-page .portfolio-main {
     margin-bottom: 24px;
 }
 
+.make-personal-grid {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.make-personal-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.make-project-card {
+    border-radius: 16px;
+    border: 0.5px solid var(--hero-border);
+    overflow: clip;
+    height: 536px;
+    padding: 24px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.make-project-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.make-project-card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 72px;
+}
+
+.make-project-card-title-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.make-project-card-title {
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.make-project-card-frame-icon {
+    width: 13px;
+    height: 16px;
+    display: block;
+}
+
+.make-project-card-subtitle {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: var(--font-weight-medium);
+    color: #ffffff;
+    margin: 0;
+    min-height: 80px;
+}
+
+.make-project-card-image-wrap {
+    width: 261.333px;
+    max-width: 100%;
+    margin-top: 0;
+    display: block;
+}
+
+.make-project-card-image {
+    width: 100%;
+    height: 100%;
+    /* Figma's <img> is sized to fill the wrapper; we mirror that by stretching. */
+    object-fit: fill;
+    display: block;
+}
+
+.make-project-card--vigor {
+    background: radial-gradient(40% 55% at 50% 55%, rgba(22,130,3,1) 0%, rgba(18,99,4,1) 25%, rgba(14,69,4,1) 50%, rgba(9,38,5,1) 75%, rgba(7,23,5,1) 87.5%, rgba(5,8,5,1) 100%);
+}
+
+.make-project-card--vigor .make-project-card-image-wrap {
+    height: 400px;
+}
+
+.make-project-card--acting-coach {
+    background: linear-gradient(180deg, #3c47bb 0%, #270890 100%);
+}
+
+.make-project-card--acting-coach .make-project-card-image-wrap {
+    height: 400px;
+}
+
+.make-project-card--wordjam {
+    background: radial-gradient(50% 60% at 50% 78%, rgba(52,52,79,1) 0%, rgba(38,38,59,1) 50%, rgba(24,24,38,1) 100%);
+}
+
+.make-project-card--wordjam .make-project-card-image-wrap {
+    height: 400px;
+}
+
+@media (max-width: 900px) {
+    .make-personal-grid-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .make-project-card {
+        height: auto;
+        gap: 24px;
+        padding: 24px;
+    }
+
+    .make-project-card-image-wrap {
+        width: 100%;
+        height: 320px !important;
+    }
+}
+
 .portfolio-card-link {
     text-decoration: none;
     color: inherit;
@@ -2391,9 +2516,13 @@ body.acting-coach-page {
 }
 
 .acting-coach-landing {
-    max-width: 897px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 80px 24px 0;
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .acting-coach-hero,
@@ -2408,7 +2537,28 @@ body.acting-coach-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 48px;
+}
+
+.acting-coach-hero {
+    width: 100%;
+    border-radius: 32px;
+    border: 0.5px solid var(--hero-border);
+    background: linear-gradient(180deg, #c60037 0%, #b80062 100%);
+    padding: 48px 48px 0;
+    box-sizing: border-box;
+}
+
+.acting-coach-hero.is-books {
+    background: linear-gradient(180deg, #3C47BB 0%, #270890 100%);
+}
+
+.acting-coach-hero.is-games {
+    background: linear-gradient(180deg, #009226 0%, #00693C 100%);
+}
+
+.acting-coach-hero.is-your-own {
+    background: linear-gradient(180deg, #EE7D0F 0%, #BF6D16 100%);
 }
 
 .acting-coach-hero-title {
@@ -2417,9 +2567,16 @@ body.acting-coach-page {
     font-weight: var(--font-weight-semibold);
     line-height: 32px;
     letter-spacing: -0.12px;
-    color: #061b31;
+    color: #ffffff;
     text-align: center;
     margin: 0;
+}
+
+.acting-coach-hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 
 .acting-coach-primary-btn {
@@ -2429,9 +2586,8 @@ body.acting-coach-page {
     gap: 8px;
     padding: 12px 20px;
     border-radius: 9px;
-    background: #ffffff;
-    border: 0.5px solid #393bb4;
-    color: #393bb4;
+    border: 0.5px solid #FFFFFF;
+    color: #FFFFFF;
     font-family: var(--font-family);
     font-size: 18px;
     font-weight: var(--font-weight-medium);
@@ -2450,6 +2606,7 @@ body.acting-coach-page {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     font-size: 18px;
     line-height: 1;
+    --fill-0: #c5013e;
 }
 
 .acting-coach-btn-icon img {
@@ -2463,8 +2620,8 @@ body.acting-coach-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
-    margin-top: 32px;
+    gap: 24px;
+    margin-top: 0;
 }
 
 .acting-coach-phone-stack {
@@ -2681,6 +2838,122 @@ body.acting-coach-page {
     margin: 0;
 }
 
+.acting-coach-testimonials {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.acting-coach-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.acting-coach-testimonial {
+    background: #f5f7fb;
+    border: 0.5px solid var(--border, #b8cadb);
+    border-radius: 32px;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: clip;
+    height: 272px;
+}
+
+.acting-coach-testimonial--big {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.acting-coach-testimonial-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.acting-coach-testimonial-badge {
+    background: #c4013e;
+    width: 48px;
+    height: 48px;
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.acting-coach-testimonial-badge img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.acting-coach-testimonial-title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 32px;
+    letter-spacing: -0.3px;
+    color: var(--text-primary, #061b31);
+    text-align: left;
+}
+
+.acting-coach-testimonial-body {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    letter-spacing: -0.075px;
+    color: var(--text-primary, #061b31);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.acting-coach-testimonial-body p {
+    margin: 0;
+}
+
+.acting-coach-testimonial--logo {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acting-coach-testimonial-logo-wrap {
+    width: 160px;
+    height: 160px;
+    display: block;
+}
+
+.acting-coach-testimonial-logo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .acting-coach-landing {
+        padding-top: 64px;
+    }
+
+    .acting-coach-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acting-coach-testimonial--big,
+    .acting-coach-testimonial--logo {
+        grid-column: auto;
+    }
+}
+
 .acting-coach-story {
     margin-top: 120px;
     padding-bottom: 40px;
@@ -2740,6 +3013,7 @@ body.acting-coach-page {
     flex-direction: column;
     gap: 12px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .portfolio-card-image {
@@ -3270,5 +3544,458 @@ body.vigor-page {
 
     .vigor-bottom-cards {
         flex-direction: column;
+    }
+}
+
+/* WordJam page – Figma node 176:34747 */
+body.wordjam-page {
+    background: var(--color-surface-off-white);
+    margin-bottom: 0;
+}
+
+.wordjam-main {
+    width: 100%;
+}
+
+.wordjam-landing {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wordjam-hero {
+    width: 100%;
+    border: 0.5px solid var(--hero-border);
+    border-radius: 32px;
+    padding: 48px 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    /* Matches the figma radial falloff used in the hero background. */
+    background: radial-gradient(35% 53% at 50.5% 78.5%, rgba(52,52,79,1) 0%, rgba(38,38,59,1) 50%, rgba(24,24,38,1) 100%);
+}
+
+.wordjam-hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.wordjam-hero-copy h1 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: -0.12px;
+    margin: 0;
+}
+
+.wordjam-hero-subhead {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -0.09px;
+}
+
+.wordjam-hero-subhead p {
+    margin: 0;
+}
+
+.wordjam-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    background: #181826;
+    border: 0.5px solid var(--chip-yellow, #f5c139);
+    color: #f5c139;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 1.45;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.wordjam-download-btn:hover {
+    opacity: 0.92;
+}
+
+.wordjam-download-icon {
+    width: 16px;
+    height: 26px;
+    display: block;
+}
+
+.wordjam-hero-phone {
+    width: 300px;
+    height: 416px;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.wordjam-phone-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 148.92%;
+    object-fit: cover;
+}
+
+.wordjam-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Figma node 176:34761 uses 24px gaps with fixed row heights. */
+    grid-template-rows: 272px 316px 248px;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.wordjam-card,
+.wordjam-sim,
+.wordjam-quickplay {
+    border-radius: 32px;
+}
+
+.wordjam-card {
+    background: var(--color-page);
+    border: 0.5px solid var(--hero-border);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: clip;
+    min-height: 248px;
+}
+
+.wordjam-card-icon {
+    background: #181826;
+    width: 48px;
+    height: 48px;
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.wordjam-card-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.wordjam-card-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wordjam-card-copy h3 {
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: #061b31;
+    margin: 0;
+}
+
+.wordjam-card-copy p {
+    font-family: var(--font-nunito);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #061b31;
+    margin: 0;
+}
+
+.wordjam-card--progression {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    min-height: 272px;
+}
+
+.wordjam-card--endless {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    min-height: 316px;
+}
+
+.wordjam-card--feel {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 248px;
+}
+
+.wordjam-card--own-risk {
+    grid-column: 2;
+    grid-row: 3;
+    min-height: 248px;
+}
+
+.wordjam-card--play-way {
+    grid-column: 3;
+    grid-row: 3;
+    min-height: 248px;
+}
+
+.wordjam-sim {
+    background: var(--color-page);
+    border: 0.5px solid var(--hero-border);
+    overflow: hidden;
+    position: relative;
+}
+
+.wordjam-sim--top-right {
+    grid-column: 3;
+    grid-row: 1;
+    min-height: 272px;
+}
+
+.wordjam-sim--middle-left {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 316px;
+}
+
+.wordjam-sim-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wordjam-sim--top-right .wordjam-sim-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wordjam-sim--middle-left .wordjam-sim-image {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wordjam-quickplay {
+    grid-column: 1;
+    grid-row: 2;
+    background: #181826;
+    border: 0.5px solid var(--hero-border);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 316px;
+}
+
+.wordjam-quickplay-heading {
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #dfe7ff;
+    margin: 0;
+}
+
+.wordjam-quickplay-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.wordjam-quickplay-option {
+    width: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 0.5px solid transparent;
+    color: #d0d7ff;
+    font-family: var(--font-nunito);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 10px 12px;
+    text-align: left;
+    cursor: default;
+}
+
+.wordjam-quickplay-option.is-active {
+    background: #393bb4;
+    border-color: #393bb4;
+    color: #ffffff;
+}
+
+.wordjam-footer {
+    max-width: 1024px;
+    margin: 0 auto;
+    background: var(--color-surface-off-white);
+    border-top: 0.5px solid var(--hero-border);
+    padding: 48px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.wordjam-footer-brand {
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 1.45;
+    font-weight: 600;
+    letter-spacing: -0.48px;
+    color: var(--text-primary);
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+.wordjam-footer-social {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.wordjam-footer-social-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wordjam-footer-social-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Site footer (Figma node 166:18378) */
+.site-footer {
+    width: 100%;
+    background: var(--color-surface-off-white);
+    border-top: 0.5px solid var(--hero-border);
+    margin-top: 32px;
+}
+
+.site-footer-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.site-footer-brand {
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+    color: var(--text-primary);
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+.site-footer-social {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.site-footer-social-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.site-footer-social-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .wordjam-hero {
+        padding: 36px 24px 0;
+        gap: 24px;
+    }
+
+    .wordjam-hero-copy {
+        padding-bottom: 0;
+    }
+
+    .wordjam-hero-phone {
+        width: 240px;
+        height: 332px;
+    }
+
+    .wordjam-phone-image {
+        height: 140%;
+    }
+
+    .wordjam-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .wordjam-card--progression,
+    .wordjam-card--endless,
+    .wordjam-card--feel,
+    .wordjam-card--own-risk,
+    .wordjam-card--play-way,
+    .wordjam-sim--top-right,
+    .wordjam-sim--middle-left {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: auto;
+    }
+
+    .wordjam-footer,
+    .site-footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .wordjam-footer-social,
+    .site-footer-social {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
     }
 }
