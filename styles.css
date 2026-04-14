@@ -3655,7 +3655,7 @@ body.wordjam-page {
     left: 0;
     width: 100%;
     height: 148.92%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .wordjam-grid {
