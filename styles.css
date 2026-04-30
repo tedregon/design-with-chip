@@ -2365,7 +2365,7 @@ body.portfolio-page .portfolio-main {
 
 .make-personal-grid-inner {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
 }
 
@@ -2465,6 +2465,67 @@ body.portfolio-page .portfolio-main {
 
 .make-project-card--wordjam .make-project-card-image-wrap {
     height: 400px;
+}
+
+.make-project-card--sudoku {
+    background: radial-gradient(65% 75% at 50% 70%, #ffffff 0%, #eef4ff 45%, #d8e4ff 100%);
+}
+
+.make-project-card--sudoku .make-project-card-title,
+.make-project-card--sudoku .make-project-card-subtitle {
+    color: var(--text-primary);
+}
+
+.make-project-card--sudoku .make-project-card-image-wrap {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.make-project-card-sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: min(100%, 260px);
+    aspect-ratio: 1;
+    border: 3px solid var(--text-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 24px 60px rgba(6, 27, 49, 0.18);
+}
+
+.make-project-card-sudoku-board span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    border-right: 1px solid #c8d3e2;
+    border-bottom: 1px solid #c8d3e2;
+    color: var(--hero-primary);
+    font-size: clamp(13px, 2vw, 20px);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+}
+
+.make-project-card-sudoku-board span:nth-child(3n) {
+    border-right-color: var(--text-primary);
+    border-right-width: 2px;
+}
+
+.make-project-card-sudoku-board span:nth-child(9n) {
+    border-right: 0;
+}
+
+.make-project-card-sudoku-board span:nth-child(n+19):nth-child(-n+27),
+.make-project-card-sudoku-board span:nth-child(n+46):nth-child(-n+54) {
+    border-bottom-color: var(--text-primary);
+    border-bottom-width: 2px;
+}
+
+.make-project-card-sudoku-board span:nth-child(n+73) {
+    border-bottom: 0;
 }
 
 @media (max-width: 900px) {
